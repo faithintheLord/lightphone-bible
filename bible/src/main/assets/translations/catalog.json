@@ -1,0 +1,33 @@
+{
+  "translations": [
+    {
+      "id": "BSB",
+      "shortName": "BSB",
+      "displayName": "Berean Standard Bible",
+      "provider": "helloao",
+      "providerTranslationId": "BSB",
+      "language": "eng",
+      "licenseName": "Public Domain",
+      "licenseUrl": "https://berean.bible/",
+      "attribution": "The Holy Bible, Berean Standard Bible, BSB is dedicated to the public domain.",
+      "enabledByDefault": true,
+      "downloadOnFirstLaunch": true,
+      "supportsWordStudy": true,
+      "interlinearProvider": "bsb-data-output"
+    },
+    {
+      "id": "WEB",
+      "shortName": "WEB",
+      "displayName": "World English Bible",
+      "provider": "helloao",
+      "providerTranslationId": "ENGWEBP",
+      "language": "eng",
+      "licenseName": "Public Domain",
+      "licenseUrl": "https://ebible.org/find/web/",
+      "attribution": "World English Bible (public domain)",
+      "enabledByDefault": true,
+      "downloadOnFirstLaunch": true,
+      "supportsWordStudy": false
+    }
+  ]
+}

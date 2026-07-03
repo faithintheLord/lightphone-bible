@@ -1,0 +1,9 @@
+# Copy to local.properties (never commit this file)
+sdk.dir=/path/to/Android/sdk
+
+# Example for Homebrew command-line tools on Apple Silicon:
+# sdk.dir=/opt/homebrew/share/android-commandlinetools
+
+# GitHub Packages (optional — keyboard is built from vendor/light-keyboard instead)
+# gpr.user=YOUR_GITHUB_USERNAME
+# gpr.key=YOUR_GITHUB_TOKEN
