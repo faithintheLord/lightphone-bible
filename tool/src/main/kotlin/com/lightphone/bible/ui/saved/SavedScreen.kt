@@ -28,7 +28,7 @@ import com.thelightphone.sdk.ui.LightTopBar
 import com.thelightphone.sdk.ui.LightTopBarCenter
 import com.thelightphone.sdk.ui.gridUnitsAsDp
 
-private const val ROW_HEIGHT = 3f
+private const val ROW_HEIGHT = 4f
 
 class SavedScreen(sealedActivity: SealedLightActivity) :
     LightScreen<Unit, SavedViewModel>(sealedActivity) {

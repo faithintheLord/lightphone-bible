@@ -1,0 +1,35 @@
+{
+  "integrity": "ok",
+  "translations": [
+    [
+      "BSB",
+      31086,
+      66,
+      1189
+    ],
+    [
+      "WEB",
+      31098,
+      66,
+      1189
+    ]
+  ],
+  "dictionaries": [
+    [
+      "greek",
+      5523
+    ],
+    [
+      "hebrew",
+      8674
+    ]
+  ],
+  "wordMappings": [
+    821929,
+    66,
+    1189
+  ],
+  "migrationPreservedBookmarkAndNote": true,
+  "correctedGenesisSpacing": true,
+  "noteOnlyVerseOmittedWithoutRenumbering": true
+}

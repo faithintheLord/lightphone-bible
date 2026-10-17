@@ -27,7 +27,7 @@ import com.thelightphone.sdk.ui.LightTopBar
 import com.thelightphone.sdk.ui.LightTopBarCenter
 import com.thelightphone.sdk.ui.gridUnitsAsDp
 
-private const val ROW_HEIGHT = 3.5f
+private const val ROW_HEIGHT = 4.5f
 
 class TranslationsScreen(sealedActivity: SealedLightActivity) :
     LightScreen<Unit, TranslationsViewModel>(sealedActivity) {
@@ -83,10 +83,14 @@ class TranslationsScreen(sealedActivity: SealedLightActivity) :
                             LightText(
                                 text = "$prefix${item.entity.displayName}",
                                 variant = LightTextVariant.Heading,
+                                maxLines = 1,
+                                overflow = androidx.compose.ui.text.style.TextOverflow.Ellipsis,
                             )
                             LightText(
                                 text = item.statusLabel,
                                 variant = LightTextVariant.Detail,
+                                maxLines = 1,
+                                overflow = androidx.compose.ui.text.style.TextOverflow.Ellipsis,
                                 lighten = true,
                             )
                         }

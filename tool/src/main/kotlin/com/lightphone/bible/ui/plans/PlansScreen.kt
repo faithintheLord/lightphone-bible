@@ -26,7 +26,7 @@ import com.thelightphone.sdk.ui.LightTopBar
 import com.thelightphone.sdk.ui.LightTopBarCenter
 import com.thelightphone.sdk.ui.gridUnitsAsDp
 
-private const val ROW_HEIGHT = 3.5f
+private const val ROW_HEIGHT = 4.5f
 
 class PlansScreen(sealedActivity: SealedLightActivity) :
     LightScreen<Unit, PlansViewModel>(sealedActivity) {
@@ -88,6 +88,8 @@ class PlansScreen(sealedActivity: SealedLightActivity) :
                             LightText(
                                 text = "${item.completedDays}/${item.plan.dayCount} days",
                                 variant = LightTextVariant.Detail,
+                                maxLines = 1,
+                                overflow = androidx.compose.ui.text.style.TextOverflow.Ellipsis,
                                 lighten = true,
                             )
                         }
