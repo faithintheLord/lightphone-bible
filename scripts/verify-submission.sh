@@ -4,6 +4,8 @@ set -euo pipefail
 ROOT="$(cd "$(dirname "$0")/.." && pwd)"
 source "$ROOT/scripts/android-env.sh"
 SDK="$ROOT/vendor/light-sdk"
+SOURCE_REF="$(git -C "$ROOT" rev-parse HEAD)"
+SOURCE_DIRTY="$(git -C "$ROOT" status --porcelain -- tool)"
 OUT="${1:-$ROOT/build/submission-check}"
 mkdir -p "$OUT"
 OUT="$(cd "$OUT" && pwd)"
@@ -19,8 +21,8 @@ PYTHONPATH="$SDK/builder" python3 -m lightbuilder prepare \
   -DlightSdk.abiFilters=arm64-v8a --console=plain) 2>&1 | tee "$OUT/build.log"
 cp "$WORKSPACE/tool/build/outputs/apk/release/tool-release-unsigned.apk" "$OUT/lightphone-bible-unsigned.apk"
 apkanalyzer manifest print "$OUT/lightphone-bible-unsigned.apk" > "$OUT/AndroidManifest.xml"
-python3 - "$OUT" "$SDK_REF" "$ROOT" <<'PY'
-import hashlib, json, sys, subprocess, tomllib, zipfile
+python3 - "$OUT" "$SDK_REF" "$ROOT" "$SOURCE_REF" "$SOURCE_DIRTY" <<'PY'
+import hashlib, json, sys, tomllib, zipfile
 import xml.etree.ElementTree as ET
 from pathlib import Path
 out=Path(sys.argv[1]); apk=out/'lightphone-bible-unsigned.apk'
@@ -38,10 +40,8 @@ assert app.get(a+'debuggable', 'false')=='false'
 metadata={n.get(a+'name'):n.get(a+'value') for n in manifest.iter('meta-data')}
 assert metadata['com.thelightphone.sdk.LIGHT_SERVER_PACKAGE']=='com.lightos'
 assert metadata['com.thelightphone.sdk.SDK_VERSION']=='0.2.0'
-source_ref=subprocess.check_output(['git','-C',sys.argv[3],'rev-parse','HEAD'],text=True).strip()
-source_dirty=bool(subprocess.check_output(['git','-C',sys.argv[3],'status','--porcelain','--','tool']))
 (out/'artifact.json').write_text(json.dumps({
-    'sdkCommit':sys.argv[2], 'sourceCommit':source_ref, 'sourceHasUncommittedChanges':source_dirty,
+    'sdkCommit':sys.argv[2], 'sourceCommit':sys.argv[4], 'sourceHasUncommittedChanges':bool(sys.argv[5]),
     'extractedSourceSha256':hashlib.sha256((out/'extracted-source.zip').read_bytes()).hexdigest(),
     'file':apk.name,
     'sha256':hashlib.sha256(apk.read_bytes()).hexdigest(),
