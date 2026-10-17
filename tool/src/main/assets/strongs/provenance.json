@@ -1,0 +1,28 @@
+{
+  "schemaVersion": 1,
+  "repository": "https://github.com/openscriptures/strongs",
+  "commit": "0acd2f251c2d35ff8db2dece4e0593979d3ac223",
+  "licenseNotice": "CC-BY-SA; the upstream dictionary headers do not specify a version",
+  "transformation": "Removed JavaScript variable/export wrapper and serialized the unchanged dictionary objects as compact UTF-8 JSON. No entry text was edited.",
+  "reproduce": "Run scripts/prepare-strongs.sh from this repository.",
+  "sources": [
+    {
+      "language": "greek",
+      "sourcePath": "greek/strongs-greek-dictionary.js",
+      "sourceUrl": "https://raw.githubusercontent.com/openscriptures/strongs/0acd2f251c2d35ff8db2dece4e0593979d3ac223/greek/strongs-greek-dictionary.js",
+      "sourceSha256": "7624ee738ae47e80f1a352223e28a26d011c9cd4898822cee52f47a010c04efd",
+      "asset": "greek.json",
+      "assetSha256": "b32ebf3cf754426e7ae7d1a24a640d991cafbc27496f94e57a37c887e0f7b1a5",
+      "entries": 5523
+    },
+    {
+      "language": "hebrew",
+      "sourcePath": "hebrew/strongs-hebrew-dictionary.js",
+      "sourceUrl": "https://raw.githubusercontent.com/openscriptures/strongs/0acd2f251c2d35ff8db2dece4e0593979d3ac223/hebrew/strongs-hebrew-dictionary.js",
+      "sourceSha256": "5ce6aeed551c709f49bcfa341cadf2f34bc7599b85d9de9e6ac2ecbf60fc3739",
+      "asset": "hebrew.json",
+      "assetSha256": "0d190a866e05929aa11cf2b87b9b1712cca9740335941304606f50d1a3fc045d",
+      "entries": 8674
+    }
+  ]
+}

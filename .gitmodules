@@ -1,8 +1,3 @@
 [submodule "vendor/light-sdk"]
 	path = vendor/light-sdk
 	url = https://github.com/lightphone/light-sdk.git
-	branch = main
-
-[submodule "vendor/light-keyboard"]
-	path = vendor/light-keyboard
-	url = https://github.com/lightphone/light-keyboard.git

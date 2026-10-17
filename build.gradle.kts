@@ -11,7 +11,7 @@ plugins {
 group = "com.lightphone"
 
 ext["compileSdk"] = 36
-ext["minSdk"] = 33
-ext["targetSdk"] = 36
+ext["minSdk"] = 34
+ext["targetSdk"] = 34
 ext["jvmTarget"] = "17"
 ext["lintVersion"] = "31.12.3"

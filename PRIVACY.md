@@ -1,33 +1,21 @@
-# Privacy Policy — Light Phone Bible
+# Privacy — Light Phone Bible
 
-**Last updated:** July 2026
+Updated October 16, 2026.
 
-## Summary
+Light Phone Bible has no accounts, advertising, analytics, or developer-operated servers. Bookmarks, highlights, notes, reading history, plan progress, downloaded Scripture, and settings are stored in the app's private storage on your device.
 
-Light Phone Bible stores all personal data locally on your device. We do not operate servers, accounts, analytics, or advertising.
+## Network requests
 
-## Data collected
+The app downloads BSB and WEB Scripture from [Free Use Bible API](https://bible.helloao.org), and BSB word mappings from [BSB Publishing on GitHub](https://github.com/BSB-publishing/bsb-data-output), served by `raw.githubusercontent.com`. These services receive your IP address and the requested translation/book/chapter paths as part of ordinary HTTPS requests. Their service policies apply. The app does not send your notes, bookmarks, highlights, reading history, searches, or other personal content to them.
 
-| Data | Where stored | Shared |
-|------|--------------|--------|
-| Bookmarks, highlights, notes | Device (Room database) | Never |
-| Reading progress & plan progress | Device (Room + DataStore) | Never |
-| Downloaded Bible text & Strong's data | Device (Room + files) | Never |
-| Settings (font size, translation choice) | Device (DataStore) | Never |
+Downloads run on first launch and when you request or retry them. Completed chapters remain available offline, and incomplete downloads can resume. Strong's dictionaries and reading plans are bundled with the app. After the content you want is downloaded, reading, search, saved items, plans, and word study work offline.
 
-## Network use
+## Permissions and storage
 
-The app uses the network **only** to download:
+The tool declares internet and network-state access. The standard Light SDK and its dependencies can add platform permissions in the merged APK (including camera and vibration support); this Bible tool does not invoke camera, microphone, location, or push-notification features. It does not request those runtime permissions.
 
-- Bible translation text (BSB, WEB) from [Free Use Bible API](https://bible.helloao.org)
-- BSB interlinear / Strong's word mappings from [BSB-publishing/bsb-data-output](https://github.com/BSB-publishing/bsb-data-output)
-
-After initial download, the app works fully offline. No usage data is transmitted.
-
-## Third-party content
-
-Bible translations and Strong's dictionary data are public-domain or openly licensed third-party texts. See [THIRD_PARTY_LICENSES.md](THIRD_PARTY_LICENSES.md).
+Personal content remains until you delete it in the app or clear/uninstall the app. Device-level backup or transfer behavior is controlled by Android/LightOS and your device settings. There is no app-operated cloud backup or sync.
 
 ## Contact
 
-Open an issue on the project GitHub repository for privacy questions.
+Report privacy questions through [the project issue tracker](https://github.com/faithintheLord/lightphone-bible/issues). Avoid including private notes or other personal information in a public issue.

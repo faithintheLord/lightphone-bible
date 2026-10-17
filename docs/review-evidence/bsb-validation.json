@@ -1,0 +1,9 @@
+{
+  "bsbCommit": "a4a2c0558c26e0281ba4e3f0e5479398459e2183",
+  "treeTruncated": false,
+  "books": 66,
+  "expectedChapterCount": 1189,
+  "actualChapterCount": 1189,
+  "missingPaths": [],
+  "unexpectedPaths": []
+}

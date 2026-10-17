@@ -1,0 +1,3118 @@
+{
+  "sdk_commit": "69216b3cd2e6a45abab63268c4d08800a5aa33da",
+  "stable_sdk_commit": "0577efca9bde782fbfd37309adcf78aa4d5b29df",
+  "reviewer": "sdk_review, with parallel review by root",
+  "scope": [
+    "Entire SDK repository at the stated commit; all 461 tracked files"
+  ],
+  "method": "Read all textual source, tests, fixtures, documentation, build configuration, CI workflows, and wrapper scripts in bounded output chunks; reread truncated portions. Parsed Android vector XML structure. Inventoried binary media, development/test keys and signatures, and the Gradle wrapper JAR. Cryptographic assets and media were not treated as source text. Reading coverage does not imply executing every SDK component or a formal security audit.",
+  "counts": {
+    "full_text_read": 328,
+    "binary_or_cryptographic_asset_inventoried": 27,
+    "xml_structure_inspected": 106
+  },
+  "files": [
+    {
+      "path": ".circleci/config.yml",
+      "review": "full_text_read",
+      "bytes": 6753,
+      "sha256": "3baee5bfa1b332730355064c1a10e0f35808ade7b26f6ad660aa07ab46502a8a",
+      "lines": 198
+    },
+    {
+      "path": ".gitattributes",
+      "review": "full_text_read",
+      "bytes": 28,
+      "sha256": "3f3c786e1e3f83b6be0a250dcdb0166405baa56bc9cf45ab0997d422d2f37ad6",
+      "lines": 1
+    },
+    {
+      "path": ".github/workflows/pr-check.yml",
+      "review": "full_text_read",
+      "bytes": 798,
+      "sha256": "4e1ca0475c493dbfabcdb9ac37a49a7445a97c1e6c0f81e8889364b3d77b33b0",
+      "lines": 40
+    },
+    {
+      "path": ".gitignore",
+      "review": "full_text_read",
+      "bytes": 642,
+      "sha256": "447abb85594dce0aefe6cc34b4592f745fdf1996e77100bfb6b533117d6cef97",
+      "lines": 55
+    },
+    {
+      "path": "CODE_OF_CONDUCT.md",
+      "review": "full_text_read",
+      "bytes": 8571,
+      "sha256": "4e44e6659613dbfe9a2fbaabffd23a5284d5682c0e87d18f72aefb55c037ac66",
+      "lines": 92
+    },
+    {
+      "path": "CONTRIBUTING.md",
+      "review": "full_text_read",
+      "bytes": 3628,
+      "sha256": "1bc687612004cfbec86e2a966003d321b299da3f095d8ac13384f195cf33ee4f",
+      "lines": 35
+    },
+    {
+      "path": "LICENSE",
+      "review": "full_text_read",
+      "bytes": 1072,
+      "sha256": "8055b339144257817b4a0f5d7013dd36c5c835bf163b990081e810f96b4bc38a",
+      "lines": 21
+    },
+    {
+      "path": "README.md",
+      "review": "full_text_read",
+      "bytes": 8855,
+      "sha256": "e4041ea240c13d78da6b27a2c3cf71ddd4fc508482eac3502829de36535f593b",
+      "lines": 72
+    },
+    {
+      "path": "TOOL_GUIDELINES.md",
+      "review": "full_text_read",
+      "bytes": 2895,
+      "sha256": "9fce891d8aecc9ec9e1cc3db190f9ecef361672c0b0c233788ec37cbdcc7b1ba",
+      "lines": 47
+    },
+    {
+      "path": "build.gradle.kts",
+      "review": "full_text_read",
+      "bytes": 1484,
+      "sha256": "35d3da1299887e58c75d28241869aa9af7df7c2b62a3c868ad88762e9f888d4f",
+      "lines": 44
+    },
+    {
+      "path": "builder/.dockerignore",
+      "review": "full_text_read",
+      "bytes": 61,
+      "sha256": "f7856f4d3c72a0763ff51369f18a738c118a553ca6251d861c2fb90fba6af2bd",
+      "lines": 6
+    },
+    {
+      "path": "builder/Dockerfile",
+      "review": "full_text_read",
+      "bytes": 6430,
+      "sha256": "4ed3825fa827554362540651536939057f380adc99c23e9033db0be8d80bd1ef",
+      "lines": 144
+    },
+    {
+      "path": "builder/README.md",
+      "review": "full_text_read",
+      "bytes": 15997,
+      "sha256": "88eb36c18229f391b0dc71761b5bd35d9ee8729980aeaa860cbb6995886f01e0",
+      "lines": 330
+    },
+    {
+      "path": "builder/bin/build-apk.sh",
+      "review": "full_text_read",
+      "bytes": 9325,
+      "sha256": "ac0fef7d169ffeb72ba2ee5bf24ddee7c457525856d2bcd2d1fedcff7568f0c4",
+      "lines": 227
+    },
+    {
+      "path": "builder/bin/build.sh",
+      "review": "full_text_read",
+      "bytes": 5753,
+      "sha256": "750b79f56b3580d6f6414baf409bb0aa493dfafe473de6de416a3c960999677c",
+      "lines": 158
+    },
+    {
+      "path": "builder/bin/maven-proxy.sh",
+      "review": "full_text_read",
+      "bytes": 565,
+      "sha256": "935cf67b409b6ebe2d31a40d08a621ef128d68216d62f8316347e4eba3334ac3",
+      "lines": 17
+    },
+    {
+      "path": "builder/lightbuilder/__init__.py",
+      "review": "full_text_read",
+      "bytes": 377,
+      "sha256": "752e15f7fb350095cc5cca466689a2dc54d5532ceb62b62a9aeedec6cb94f7ce",
+      "lines": 11
+    },
+    {
+      "path": "builder/lightbuilder/__main__.py",
+      "review": "full_text_read",
+      "bytes": 9336,
+      "sha256": "711e3c46925bfa8c256539a9d7a343fd9b9d52bb9a0d6505334b3aa996921d75",
+      "lines": 243
+    },
+    {
+      "path": "builder/lightbuilder/allowlist.py",
+      "review": "full_text_read",
+      "bytes": 2793,
+      "sha256": "b92972b325cb9f6ca3a90e6867627b04426f39e82072253f57d6caa9cde849a2",
+      "lines": 67
+    },
+    {
+      "path": "builder/lightbuilder/extract.py",
+      "review": "full_text_read",
+      "bytes": 9556,
+      "sha256": "37895a69c5ef8793a554c899e731e10234b6880ef6217a3706ac9e82a3dad7cf",
+      "lines": 267
+    },
+    {
+      "path": "builder/lightbuilder/native.py",
+      "review": "full_text_read",
+      "bytes": 6200,
+      "sha256": "ca53590bb81eae8269c59180ab65682fbeebb8086acea1d8bc78be1abba7ec9e",
+      "lines": 167
+    },
+    {
+      "path": "builder/lightbuilder/recipe.py",
+      "review": "full_text_read",
+      "bytes": 2107,
+      "sha256": "6ecdc6f9a418c3671bade243a83635c5515a4c02b6ab184e7d252adec4a6e99a",
+      "lines": 80
+    },
+    {
+      "path": "builder/proxy/init.gradle.kts",
+      "review": "full_text_read",
+      "bytes": 746,
+      "sha256": "a35504c1a29b4c6b2ae4afc5fe6780afdadbd0771ffd0567b168584a075e5c39",
+      "lines": 21
+    },
+    {
+      "path": "builder/proxy/nginx.conf",
+      "review": "full_text_read",
+      "bytes": 3213,
+      "sha256": "9037e3114f5dd0cd4ca2e193191dce2004945d7177cde0865bb96e9813596078",
+      "lines": 98
+    },
+    {
+      "path": "builder/tests/__init__.py",
+      "review": "full_text_read",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "lines": 0
+    },
+    {
+      "path": "builder/tests/check_native.py",
+      "review": "full_text_read",
+      "bytes": 1264,
+      "sha256": "6089b9ff68264018ee0ab6569d16fcdc7c725e9a3fcbcf8c32309821ad92a60d",
+      "lines": 36
+    },
+    {
+      "path": "builder/tests/check_proxy_startup.sh",
+      "review": "full_text_read",
+      "bytes": 686,
+      "sha256": "ca62d6154a2b9ad63520990bf87abfa2570ace7c7235a16834b36840a260161d",
+      "lines": 22
+    },
+    {
+      "path": "builder/tests/conftest.py",
+      "review": "full_text_read",
+      "bytes": 341,
+      "sha256": "e957ae15dc5d59d84caa0bc087fe5a31300790a3091f814ebea7ae9c21696245",
+      "lines": 12
+    },
+    {
+      "path": "builder/tests/fixtures/ktor-server-tool/tool/build.gradle.kts",
+      "review": "full_text_read",
+      "bytes": 1054,
+      "sha256": "d47e5ee6dc10b65b55670a0d994164f2560ddcb8d84b22c2c41ce6dfc13420ad",
+      "lines": 36
+    },
+    {
+      "path": "builder/tests/fixtures/ktor-server-tool/tool/lighttool.toml",
+      "review": "full_text_read",
+      "bytes": 199,
+      "sha256": "2f5440343bffd71f385b6f039bc7dad2fdd0052ee7af1c583b4d7415f5747d93",
+      "lines": 8
+    },
+    {
+      "path": "builder/tests/fixtures/ktor-server-tool/tool/src/main/kotlin/com/example/ktorserver/ToolEntryPoint.kt",
+      "review": "full_text_read",
+      "bytes": 561,
+      "sha256": "d5b4c9534968ae75abdec57e1e7111dff603bdd2b2ce639d7dc65ead7148eeba",
+      "lines": 17
+    },
+    {
+      "path": "builder/tests/fixtures/native-tool/tool/build.gradle.kts",
+      "review": "full_text_read",
+      "bytes": 1202,
+      "sha256": "e00df41abeda3144a71168e12d65ce1d996b4f9a0d9cf4a8eb482bfacd2c4a33",
+      "lines": 38
+    },
+    {
+      "path": "builder/tests/fixtures/native-tool/tool/lighttool.toml",
+      "review": "full_text_read",
+      "bytes": 194,
+      "sha256": "bb136b8b89c60ceba2cabeb2cbb1aae509384331973547fded116a8afbd51de6",
+      "lines": 8
+    },
+    {
+      "path": "builder/tests/fixtures/native-tool/tool/src/main/kotlin/com/example/nativetool/ToolEntryPoint.kt",
+      "review": "full_text_read",
+      "bytes": 423,
+      "sha256": "72ffa3f4311c9957f721f4dd4a85c54332a706481858a7490c29536be9b516e0",
+      "lines": 14
+    },
+    {
+      "path": "builder/tests/integration.sh",
+      "review": "full_text_read",
+      "bytes": 1995,
+      "sha256": "52b05629fe432fe96817fe9ace6f7218b8e9863837ccc4e27d1de06562299177",
+      "lines": 63
+    },
+    {
+      "path": "builder/tests/test_check_native.py",
+      "review": "full_text_read",
+      "bytes": 2502,
+      "sha256": "cfea0c986f1e02c25a2c46b8ca8ec993e8ba4ab810c2f9bee132fe40ab3ad8e2",
+      "lines": 80
+    },
+    {
+      "path": "builder/tests/test_extract.py",
+      "review": "full_text_read",
+      "bytes": 8911,
+      "sha256": "014e68ae1a10802ed8fe12d900961dcf2a4e17c43e12e2a83856458bef3867de",
+      "lines": 258
+    },
+    {
+      "path": "builder/tests/test_native.py",
+      "review": "full_text_read",
+      "bytes": 4980,
+      "sha256": "71e0484733d35b355784056c64edeef9588582254ec0ca360a7e2bca02d327a0",
+      "lines": 151
+    },
+    {
+      "path": "builder/tests/test_recipe.py",
+      "review": "full_text_read",
+      "bytes": 1302,
+      "sha256": "dcc856653545764bded63c957a9ddbcff667d417ce356286b6778d5e68561690",
+      "lines": 43
+    },
+    {
+      "path": "docs/README.md",
+      "review": "full_text_read",
+      "bytes": 481,
+      "sha256": "0587543033de0f574c0528d5b8f01f1a02af21fd50183b7885f906537db163ca",
+      "lines": 12
+    },
+    {
+      "path": "docs/design_decisions/README.md",
+      "review": "full_text_read",
+      "bytes": 132,
+      "sha256": "64c555fa3bfdd17e0cd143d43c92228552769f5bdb2f4a2e3602215ca1b5a732",
+      "lines": 4
+    },
+    {
+      "path": "docs/design_decisions/detached_audio.md",
+      "review": "full_text_read",
+      "bytes": 14019,
+      "sha256": "cdaf157ed33bbccbf604bc6b3be6e31a2f7fdb10b2112f28727a16fc524dcee8",
+      "lines": 195
+    },
+    {
+      "path": "docs/repo/README.md",
+      "review": "full_text_read",
+      "bytes": 3976,
+      "sha256": "5fe62eb1fa539a06e6047ecbc1ecbbe52be7094eed383fd0f6b1a262258eec36",
+      "lines": 56
+    },
+    {
+      "path": "docs/sideloading/README.md",
+      "review": "full_text_read",
+      "bytes": 5172,
+      "sha256": "650d3cadbb47b4ed8889b257134f247c79e834c4fb343e5bd7753b6f28e79367",
+      "lines": 69
+    },
+    {
+      "path": "docs/sideloading/developer.png",
+      "review": "binary_or_cryptographic_asset_inventoried",
+      "bytes": 75742,
+      "sha256": "71ca8475027325b66d2846a20c3bbeb9a101e0d0e1e6525aef8c4a3963485b94"
+    },
+    {
+      "path": "docs/sideloading/light_debug_signing_key.txt",
+      "review": "full_text_read",
+      "bytes": 64,
+      "sha256": "4a4ab8621a39157457ec75e83036059ee6a1f66bb393572456acc1a444775b1c",
+      "lines": 1
+    },
+    {
+      "path": "docs/system_app/README.md",
+      "review": "full_text_read",
+      "bytes": 6899,
+      "sha256": "6d18e83a31ace8b0f84061d31d2e489aee2c8bcfff2745a1eebe68cdd62e4917",
+      "lines": 159
+    },
+    {
+      "path": "docs/tool_manager/README.md",
+      "review": "full_text_read",
+      "bytes": 4267,
+      "sha256": "d088fb68a937cdb8d0b954dda6f716fb08657e2e7c5b846aa8a20e9983273a39",
+      "lines": 65
+    },
+    {
+      "path": "docs/tool_manager/tool_manager_demo_sm.gif",
+      "review": "binary_or_cryptographic_asset_inventoried",
+      "bytes": 466113,
+      "sha256": "c6634eaf54face559c33cc7c9998c3bb527e70b3beef3bc1088613f83e6e93d8"
+    },
+    {
+      "path": "docs/tool_metadata/README.md",
+      "review": "full_text_read",
+      "bytes": 5479,
+      "sha256": "cb42c9e38c18545ed0fd73a8184f7a0cf0414338610fb618b819c2b0b174834c",
+      "lines": 86
+    },
+    {
+      "path": "docs/tool_signing/README.md",
+      "review": "full_text_read",
+      "bytes": 3434,
+      "sha256": "d8ae97971f7208668661ab3d3b6bab4d2ea666bf9bd4c9228b22974ed326e24e",
+      "lines": 68
+    },
+    {
+      "path": "docs/tool_signing/install_policy.md",
+      "review": "full_text_read",
+      "bytes": 3985,
+      "sha256": "6acb817880da48134114d464cbfdd1d14fd32088da3f596fdde37f5cdb20e259",
+      "lines": 79
+    },
+    {
+      "path": "docs/tool_signing/threat_matrix.md",
+      "review": "full_text_read",
+      "bytes": 3984,
+      "sha256": "956df5e26f4ca4d22dd644df752340f32cfd20e83fdeba8adc0c096ca34ee5bf",
+      "lines": 40
+    },
+    {
+      "path": "docs/tool_signing/trust_bundle.md",
+      "review": "full_text_read",
+      "bytes": 2166,
+      "sha256": "015c809cf0d10fa983521582a9dc4a8bdfe53e53ad6649cb3b24f98c872c921b",
+      "lines": 48
+    },
+    {
+      "path": "examples/README.md",
+      "review": "full_text_read",
+      "bytes": 1281,
+      "sha256": "e51e1ef036e63f1ef01918f72f1e01ee483419607e7aed57bddf65594200a797",
+      "lines": 31
+    },
+    {
+      "path": "examples/audio-demo/build.gradle.kts",
+      "review": "full_text_read",
+      "bytes": 1604,
+      "sha256": "f1ba91fe80b6363a99cb578d3e9f0147e4bde977990d75c8e682a8ce71861e5b",
+      "lines": 60
+    },
+    {
+      "path": "examples/audio-demo/lighttool.toml",
+      "review": "full_text_read",
+      "bytes": 436,
+      "sha256": "f966448528529707377cb09e989305de92f1b230576bdd03d1604cdbd5c929be",
+      "lines": 11
+    },
+    {
+      "path": "examples/audio-demo/src/main/assets/audio/CREDITS.md",
+      "review": "full_text_read",
+      "bytes": 2331,
+      "sha256": "2662960746dc335545961c1b4ca5d3fec7d4055437d708a873c6eed6a03e68e9",
+      "lines": 70
+    },
+    {
+      "path": "examples/audio-demo/src/main/assets/audio/audrey-tang-interview.mp3",
+      "review": "binary_or_cryptographic_asset_inventoried",
+      "bytes": 240788,
+      "sha256": "d1c1926d774451dc041755c7ca1ee6940b4e7bf969b7a1b4d75579560b71eaaa"
+    },
+    {
+      "path": "examples/audio-demo/src/main/assets/audio/gong.wav",
+      "review": "binary_or_cryptographic_asset_inventoried",
+      "bytes": 441492,
+      "sha256": "7b49f980f72a77e514ecf16bcda634424b42603598b127458f649b0b7fd87814"
+    },
+    {
+      "path": "examples/audio-demo/src/main/assets/audio/laser.wav",
+      "review": "binary_or_cryptographic_asset_inventoried",
+      "bytes": 354328,
+      "sha256": "93cc17a46e6029d7c7dd1b7080631ab90791e3c1bc3123188de45c349995366c"
+    },
+    {
+      "path": "examples/audio-demo/src/main/assets/audio/magic.wav",
+      "review": "binary_or_cryptographic_asset_inventoried",
+      "bytes": 344764,
+      "sha256": "42229788eb0157465f1ece0c398dc1591bcea2b2fb5c804dd813e21c12f2d0ef"
+    },
+    {
+      "path": "examples/audio-demo/src/main/assets/audio/pop.wav",
+      "review": "binary_or_cryptographic_asset_inventoried",
+      "bytes": 57388,
+      "sha256": "b3097f661b59b429e8bdbbd90b0e94f9b71fe4cb17f0a550fb1a9af0d194ac61"
+    },
+    {
+      "path": "examples/audio-demo/src/main/assets/audio/seletores-de-frequencia.mp3",
+      "review": "binary_or_cryptographic_asset_inventoried",
+      "bytes": 321035,
+      "sha256": "4d8cd8bc0200024bfb6b373a1ef06d3bf3afd71a85390fe9b541b7cd339f883c"
+    },
+    {
+      "path": "examples/audio-demo/src/main/assets/audio/small-talk-build-iv.ogg",
+      "review": "binary_or_cryptographic_asset_inventoried",
+      "bytes": 305937,
+      "sha256": "94b060e37dd4a10cecb99b700c3e2089c431196b417dc30e7adbf990e5c99189"
+    },
+    {
+      "path": "examples/audio-demo/src/main/kotlin/com/thelightphone/audiodemo/AudioLibraryRepository.kt",
+      "review": "full_text_read",
+      "bytes": 7604,
+      "sha256": "2b1a95955bbc21de3c0e7219275f2d6e411c8ef9cbb661fef87d13dd431adef5",
+      "lines": 181
+    },
+    {
+      "path": "examples/audio-demo/src/main/kotlin/com/thelightphone/audiodemo/CaptureScreen.kt",
+      "review": "full_text_read",
+      "bytes": 11383,
+      "sha256": "99b48c00dfc30fa8efe7f36b9167ac27466ca344500f83f7163f59b16a57ea16",
+      "lines": 285
+    },
+    {
+      "path": "examples/audio-demo/src/main/kotlin/com/thelightphone/audiodemo/HomeScreen.kt",
+      "review": "full_text_read",
+      "bytes": 2789,
+      "sha256": "f2d02b5a759d5cee9e0cda2cfdea128b1bde6fafc2a642425a84a63978723971",
+      "lines": 74
+    },
+    {
+      "path": "examples/audio-demo/src/main/kotlin/com/thelightphone/audiodemo/PlayerScreen.kt",
+      "review": "full_text_read",
+      "bytes": 24406,
+      "sha256": "2c17ad308edca835b94ede5cff299948302fe0393d8100d830123c38b1b1a232",
+      "lines": 588
+    },
+    {
+      "path": "examples/audio-demo/src/main/kotlin/com/thelightphone/audiodemo/RecorderScreen.kt",
+      "review": "full_text_read",
+      "bytes": 12764,
+      "sha256": "48879ce6fdfaf6a5d99059a69fe76f3044eadc806d10fd43bad2ef5416a11139",
+      "lines": 368
+    },
+    {
+      "path": "examples/audio-demo/src/main/kotlin/com/thelightphone/audiodemo/RecordingTimeFormat.kt",
+      "review": "full_text_read",
+      "bytes": 1447,
+      "sha256": "7c240630e8d014b13f62b0407cfd2cbc91b10e48d97efa00a4c0f14315b8c2b5",
+      "lines": 39
+    },
+    {
+      "path": "examples/audio-demo/src/main/kotlin/com/thelightphone/audiodemo/SpectrumAnalyzer.kt",
+      "review": "full_text_read",
+      "bytes": 4160,
+      "sha256": "f98cae802ab7f7175d5f96b97cce25e5e2872e3def4a7ee78557aac60e14a06a",
+      "lines": 113
+    },
+    {
+      "path": "examples/audio-demo/src/main/kotlin/com/thelightphone/audiodemo/ToneScreen.kt",
+      "review": "full_text_read",
+      "bytes": 10739,
+      "sha256": "4a7e7f3007238a8ce4c683b0ec7b7ef680c13e62adc234aa50e5791d32265b5a",
+      "lines": 287
+    },
+    {
+      "path": "examples/audio-demo/src/main/kotlin/com/thelightphone/audiodemo/ToneSynthesis.kt",
+      "review": "full_text_read",
+      "bytes": 1009,
+      "sha256": "986d9c89e72c5d0b685b0e5f5edcc238dd9366d689b4c4f04c52afe5df5601cc",
+      "lines": 22
+    },
+    {
+      "path": "examples/audio-demo/src/main/kotlin/com/thelightphone/audiodemo/WavPcmDecoder.kt",
+      "review": "full_text_read",
+      "bytes": 4887,
+      "sha256": "85d884b87aef4ad96653b4f2978c332811563d74f33950dc1ce8f2114ccd5593",
+      "lines": 118
+    },
+    {
+      "path": "examples/audio-demo/src/test/kotlin/com/thelightphone/audiodemo/AudioLibraryRepositoryTest.kt",
+      "review": "full_text_read",
+      "bytes": 2915,
+      "sha256": "271fb0a8cdde7c5d035bc73857ac73f57064e980a366f255a3150746eaf92033",
+      "lines": 71
+    },
+    {
+      "path": "examples/audio-demo/src/test/kotlin/com/thelightphone/audiodemo/PlayerScreenTest.kt",
+      "review": "full_text_read",
+      "bytes": 5149,
+      "sha256": "37f48c30708bf74f2c5bcb8f138cb95cca88513982c51297ba58ea5c4c4c814a",
+      "lines": 130
+    },
+    {
+      "path": "examples/audio-demo/src/test/kotlin/com/thelightphone/audiodemo/RecorderScreenTest.kt",
+      "review": "full_text_read",
+      "bytes": 281,
+      "sha256": "e706c60962f2d6d39c95da7526d396d62ba6b268a01718054d826641f82faaad",
+      "lines": 12
+    },
+    {
+      "path": "examples/audio-demo/src/test/kotlin/com/thelightphone/audiodemo/SpectrumAnalyzerTest.kt",
+      "review": "full_text_read",
+      "bytes": 2448,
+      "sha256": "8d0344354816ea699e69ecd9ed6b293869937d7bc1dc87083f08731d33881db5",
+      "lines": 69
+    },
+    {
+      "path": "examples/audio-demo/src/test/kotlin/com/thelightphone/audiodemo/ToneScreenTest.kt",
+      "review": "full_text_read",
+      "bytes": 2317,
+      "sha256": "d1ec3a593e4dad09be5909a0cb1a9e63b142714f12d7e932537c02583c3a4133",
+      "lines": 58
+    },
+    {
+      "path": "examples/audio-demo/src/test/kotlin/com/thelightphone/audiodemo/ToneSynthesisTest.kt",
+      "review": "full_text_read",
+      "bytes": 853,
+      "sha256": "231693289df760c1b725b951b67afa75a569d738574a7487a7e87c8f7ff8acba",
+      "lines": 28
+    },
+    {
+      "path": "examples/audio-demo/src/test/kotlin/com/thelightphone/audiodemo/WavPcmDecoderTest.kt",
+      "review": "full_text_read",
+      "bytes": 4067,
+      "sha256": "094f37346a50e2afe6ee222e489621d963d76dc534e4aec46a3f86cee19c079a",
+      "lines": 127
+    },
+    {
+      "path": "examples/authenticator/build.gradle.kts",
+      "review": "full_text_read",
+      "bytes": 1759,
+      "sha256": "ecd051262c0bd069a2d62c72558b76ad90b908a487930aaab6a0c8487accf862",
+      "lines": 63
+    },
+    {
+      "path": "examples/authenticator/lighttool.toml",
+      "review": "full_text_read",
+      "bytes": 333,
+      "sha256": "c9afb0fd6c8227a95cf59205e94831e9b04052b29a27608c9f6f30ed576d5c76",
+      "lines": 9
+    },
+    {
+      "path": "examples/authenticator/src/main/kotlin/com/thelightphone/authenticator/Account.kt",
+      "review": "full_text_read",
+      "bytes": 477,
+      "sha256": "65ccd7d3f1938a7233ad640cc5c59e714f4ae0770868df1bc652a5b3f474b3e2",
+      "lines": 18
+    },
+    {
+      "path": "examples/authenticator/src/main/kotlin/com/thelightphone/authenticator/AccountListRow.kt",
+      "review": "full_text_read",
+      "bytes": 931,
+      "sha256": "8191702f469ce7cff7dee5cec338d35bdf017c9976b2e02147c5df1b2161aeea",
+      "lines": 30
+    },
+    {
+      "path": "examples/authenticator/src/main/kotlin/com/thelightphone/authenticator/AuthenticatorCodeScreen.kt",
+      "review": "full_text_read",
+      "bytes": 5130,
+      "sha256": "149cef0c5b18d743bef44310995a7106f33727c113fbd433ee2e0a80af53150c",
+      "lines": 127
+    },
+    {
+      "path": "examples/authenticator/src/main/kotlin/com/thelightphone/authenticator/AuthenticatorConfirmRemoveScreen.kt",
+      "review": "full_text_read",
+      "bytes": 3668,
+      "sha256": "c7b6c961a1c92fde20c2e9fda15b3a1598633c49e8ca34c76757ab8531dc5e3f",
+      "lines": 93
+    },
+    {
+      "path": "examples/authenticator/src/main/kotlin/com/thelightphone/authenticator/AuthenticatorHomeScreen.kt",
+      "review": "full_text_read",
+      "bytes": 6229,
+      "sha256": "ffb455c45bf20ba412ca28498a2e0ace8a351a2e9bf526fa85dcce2e5c3ca54a",
+      "lines": 150
+    },
+    {
+      "path": "examples/authenticator/src/main/kotlin/com/thelightphone/authenticator/AuthenticatorQrScannerScreen.kt",
+      "review": "full_text_read",
+      "bytes": 1833,
+      "sha256": "bdc5d396ebc6fc0cd12afcdc0387e26a8af6c90498d4f259bc4816935cbddc52",
+      "lines": 52
+    },
+    {
+      "path": "examples/authenticator/src/main/kotlin/com/thelightphone/authenticator/AuthenticatorViewModel.kt",
+      "review": "full_text_read",
+      "bytes": 1214,
+      "sha256": "f7f254e6fd1452df87c1a09951055bdd24c0b45635356ba49ff826cc18d2e924",
+      "lines": 42
+    },
+    {
+      "path": "examples/authenticator/src/main/kotlin/com/thelightphone/authenticator/Base32.kt",
+      "review": "full_text_read",
+      "bytes": 932,
+      "sha256": "48193b8297824d8e09493d15c5800c4c7780a9100866e7ae6ed430a80d2ada79",
+      "lines": 34
+    },
+    {
+      "path": "examples/authenticator/src/main/kotlin/com/thelightphone/authenticator/OtpAuthUriParser.kt",
+      "review": "full_text_read",
+      "bytes": 2999,
+      "sha256": "efe9675a751c414b54120b2e3651ff25af4c7f49c923ba0dbb2abcf31788504b",
+      "lines": 81
+    },
+    {
+      "path": "examples/authenticator/src/main/kotlin/com/thelightphone/authenticator/StoredAccount.kt",
+      "review": "full_text_read",
+      "bytes": 456,
+      "sha256": "4867b80e649e5d055d30fdb00c8c070f2e39cca3eacab3d5d00f1c4cf907f1d9",
+      "lines": 18
+    },
+    {
+      "path": "examples/authenticator/src/main/kotlin/com/thelightphone/authenticator/TotpAccountDao.kt",
+      "review": "full_text_read",
+      "bytes": 1105,
+      "sha256": "a2c1cf9985a8621586471108791e632ab7874025b48a9d2e2fc9d71742bb5576",
+      "lines": 36
+    },
+    {
+      "path": "examples/authenticator/src/main/kotlin/com/thelightphone/authenticator/TotpAccountEntity.kt",
+      "review": "full_text_read",
+      "bytes": 458,
+      "sha256": "8adb9f67b663d59d3ee32e05018f8c3b30ae3bd8421f64856013b521b5168db2",
+      "lines": 16
+    },
+    {
+      "path": "examples/authenticator/src/main/kotlin/com/thelightphone/authenticator/TotpAccountRepository.kt",
+      "review": "full_text_read",
+      "bytes": 2607,
+      "sha256": "4e6364b8e1fbd190b3926259f0ebfc5e5ce0086e6f259f21177d20c0ef522892",
+      "lines": 76
+    },
+    {
+      "path": "examples/authenticator/src/main/kotlin/com/thelightphone/authenticator/TotpAlgorithm.kt",
+      "review": "full_text_read",
+      "bytes": 428,
+      "sha256": "037bec4b25ff9216efb6bbc5c358a818109663f81a5fcf5834edb3e0df12e233",
+      "lines": 15
+    },
+    {
+      "path": "examples/authenticator/src/main/kotlin/com/thelightphone/authenticator/TotpCodeDisplay.kt",
+      "review": "full_text_read",
+      "bytes": 2497,
+      "sha256": "5525079deeec562188c961e1403dd5281e95677efc3b200b8d839cc4bcf6638f",
+      "lines": 78
+    },
+    {
+      "path": "examples/authenticator/src/main/kotlin/com/thelightphone/authenticator/TotpDatabase.kt",
+      "review": "full_text_read",
+      "bytes": 294,
+      "sha256": "7f312e168341a67bab8122c6f3843a519e485b1922db3646705e8770311e0419",
+      "lines": 9
+    },
+    {
+      "path": "examples/authenticator/src/main/kotlin/com/thelightphone/authenticator/TotpGenerator.kt",
+      "review": "full_text_read",
+      "bytes": 1785,
+      "sha256": "f8ba85c7853dd85c150b3515dd5ce568f6f11a6bc33103aaa1444eb8a6bb220c",
+      "lines": 54
+    },
+    {
+      "path": "examples/authenticator/src/main/kotlin/com/thelightphone/authenticator/TotpKeystore.kt",
+      "review": "full_text_read",
+      "bytes": 1462,
+      "sha256": "ee4ca9e722057208c70c224f96c99892b542fa21bc6e446bd826749868aa0346",
+      "lines": 44
+    },
+    {
+      "path": "examples/authenticator/src/main/kotlin/com/thelightphone/authenticator/TotpSecretCipher.kt",
+      "review": "full_text_read",
+      "bytes": 1466,
+      "sha256": "5c63c2dfb6460a484820a256f63468906714c56ed02b57d68250fab392735d6f",
+      "lines": 47
+    },
+    {
+      "path": "examples/authenticator/src/test/kotlin/com/thelightphone/authenticator/FormatExpiryCountdownTest.kt",
+      "review": "full_text_read",
+      "bytes": 452,
+      "sha256": "2d9656ac3ed9148dec82793b2fdfc1ff6340d859eb1eb29ad17ee75313229dc8",
+      "lines": 21
+    },
+    {
+      "path": "examples/authenticator/src/test/kotlin/com/thelightphone/authenticator/OtpAuthUriParserTest.kt",
+      "review": "full_text_read",
+      "bytes": 1527,
+      "sha256": "a96033e87b6d779919d7e292f9fa627d1113dbcc8553441722d5f07345752715",
+      "lines": 51
+    },
+    {
+      "path": "examples/authenticator/src/test/kotlin/com/thelightphone/authenticator/TotpGeneratorTest.kt",
+      "review": "full_text_read",
+      "bytes": 1334,
+      "sha256": "3acae564c0c66a1fff868b0f989cd001005860b660a024589e35257d76058e00",
+      "lines": 50
+    },
+    {
+      "path": "examples/tool-manager-demo/build.gradle.kts",
+      "review": "full_text_read",
+      "bytes": 1645,
+      "sha256": "877f82ffef9da252bb1397b2d8d0766d35052c6825a27c2918372f390741e475",
+      "lines": 60
+    },
+    {
+      "path": "examples/tool-manager-demo/lighttool.toml",
+      "review": "full_text_read",
+      "bytes": 382,
+      "sha256": "5c00434fbcd94a9d414bfaf6bd03952b66b5a790bb3befc139907293888a7fa4",
+      "lines": 10
+    },
+    {
+      "path": "examples/tool-manager-demo/src/main/kotlin/com/thelightphone/toolmanagerdemo/ToolManagerDemoHomeScreen.kt",
+      "review": "full_text_read",
+      "bytes": 7889,
+      "sha256": "e103824832c10090c2d0bf6db3e4ee4105ffed5376c953a683511f0ef063caa6",
+      "lines": 200
+    },
+    {
+      "path": "examples/ui-demo/build.gradle.kts",
+      "review": "full_text_read",
+      "bytes": 1604,
+      "sha256": "f1ba91fe80b6363a99cb578d3e9f0147e4bde977990d75c8e682a8ce71861e5b",
+      "lines": 60
+    },
+    {
+      "path": "examples/ui-demo/lighttool.toml",
+      "review": "full_text_read",
+      "bytes": 368,
+      "sha256": "8555d45b9e94bdbea9e4653418dcc9c5bcc8322fabb59d04484191d643732eaa",
+      "lines": 9
+    },
+    {
+      "path": "examples/ui-demo/src/main/kotlin/com/thelightphone/uidemo/UiDemoHomeScreen.kt",
+      "review": "full_text_read",
+      "bytes": 7118,
+      "sha256": "15d74a7f63ed13f4199b7ad9e038e0ef9de4d7eebd3e2c6a6b951d3f97c24493",
+      "lines": 151
+    },
+    {
+      "path": "examples/ui-demo/src/main/kotlin/com/thelightphone/uidemo/UiDemoIconsScreen.kt",
+      "review": "full_text_read",
+      "bytes": 4052,
+      "sha256": "d31fd0dc0d2907a6ba1c699d2e2aa345011e771c199c89ba5c0537da02636bcf",
+      "lines": 113
+    },
+    {
+      "path": "examples/ui-demo/src/main/kotlin/com/thelightphone/uidemo/UiDemoKeyEventsScreen.kt",
+      "review": "full_text_read",
+      "bytes": 4127,
+      "sha256": "cf4a04e49c39b5c71b41849595548ad60e2f2abb278d6160d963d48970b5ffbb",
+      "lines": 110
+    },
+    {
+      "path": "examples/ui-demo/src/main/kotlin/com/thelightphone/uidemo/UiDemoLocationScreen.kt",
+      "review": "full_text_read",
+      "bytes": 8192,
+      "sha256": "5ba09808b6c515df90efb7e0ac88e1b8573f9b55936f625038c09ed14159f41b",
+      "lines": 222
+    },
+    {
+      "path": "examples/ui-demo/src/main/kotlin/com/thelightphone/uidemo/UiDemoProgressBarScreen.kt",
+      "review": "full_text_read",
+      "bytes": 2595,
+      "sha256": "8db76dccb47d75808ecb1d4ba3e50fd6b1f5f7356e39d69459f8ef8b3c658387",
+      "lines": 67
+    },
+    {
+      "path": "examples/ui-demo/src/main/kotlin/com/thelightphone/uidemo/UiDemoQrResultScreen.kt",
+      "review": "full_text_read",
+      "bytes": 2840,
+      "sha256": "85b9b8f6283931ab6cac3b201a2c63334da6fe8c9228a879f8b5f6d66c8f4f71",
+      "lines": 74
+    },
+    {
+      "path": "examples/ui-demo/src/main/kotlin/com/thelightphone/uidemo/UiDemoQrScannerScreen.kt",
+      "review": "full_text_read",
+      "bytes": 1805,
+      "sha256": "4af7e05358bebc46bc2db174f60fd3e2331b19c212cbaa3e3fe3718651fd1f8f",
+      "lines": 50
+    },
+    {
+      "path": "examples/ui-demo/src/main/kotlin/com/thelightphone/uidemo/UiDemoScrollScreen.kt",
+      "review": "full_text_read",
+      "bytes": 2950,
+      "sha256": "b53fc165f4a04ce4658c473b79f31a261e4ef011990decbd5833f6abd487796b",
+      "lines": 78
+    },
+    {
+      "path": "examples/ui-demo/src/main/kotlin/com/thelightphone/uidemo/UiDemoSecondScreen.kt",
+      "review": "full_text_read",
+      "bytes": 3453,
+      "sha256": "8c9db85fe6f1a7cbd2e3f4189d6178c0ac5ed42735aa354adfdc494b37ee95fa",
+      "lines": 94
+    },
+    {
+      "path": "examples/ui-demo/src/main/kotlin/com/thelightphone/uidemo/UiDemoTextInputEditorScreen.kt",
+      "review": "full_text_read",
+      "bytes": 2851,
+      "sha256": "cfd81079a942cd7908d5fc41d906a4a90dfefde8b460a83bf551655fef4c25aa",
+      "lines": 82
+    },
+    {
+      "path": "examples/ui-demo/src/main/kotlin/com/thelightphone/uidemo/UiDemoTextInputScreen.kt",
+      "review": "full_text_read",
+      "bytes": 3381,
+      "sha256": "daab64f8c45f16cd7c7bb48b981a838cc2e79606498d56b8f84cf58f15ebeb6e",
+      "lines": 88
+    },
+    {
+      "path": "examples/weather/build.gradle.kts",
+      "review": "full_text_read",
+      "bytes": 1646,
+      "sha256": "31396c732ea31ef482588264e4f64f422bed3dd988d007e6497fef0da42eafc1",
+      "lines": 61
+    },
+    {
+      "path": "examples/weather/lighttool.toml",
+      "review": "full_text_read",
+      "bytes": 323,
+      "sha256": "810c86a6c4374d34c0b63614f1fc71c8230a74a4b750891eb2da0eec9c62290e",
+      "lines": 9
+    },
+    {
+      "path": "examples/weather/src/main/kotlin/com/thelightphone/weather/WeatherApi.kt",
+      "review": "full_text_read",
+      "bytes": 7692,
+      "sha256": "06dc37d3a3775880319c6b4522451b85bd02a7e51a5703e9af172b55f7680c6a",
+      "lines": 199
+    },
+    {
+      "path": "examples/weather/src/main/kotlin/com/thelightphone/weather/WeatherFormatting.kt",
+      "review": "full_text_read",
+      "bytes": 5533,
+      "sha256": "a307f5e988004731561895febcc10ad1156fb8bcfe4828d17a3b505dcad795a0",
+      "lines": 159
+    },
+    {
+      "path": "examples/weather/src/main/kotlin/com/thelightphone/weather/WeatherHomeScreen.kt",
+      "review": "full_text_read",
+      "bytes": 26569,
+      "sha256": "836f774d67ed13d435874c65bc4aef76a78c456d8a47450d892167f227ad5d61",
+      "lines": 742
+    },
+    {
+      "path": "examples/weather/src/main/kotlin/com/thelightphone/weather/WeatherModels.kt",
+      "review": "full_text_read",
+      "bytes": 3868,
+      "sha256": "5e266e2df176aee940e4bd4ba8d074fc27518da635021836664408ec26737d1d",
+      "lines": 127
+    },
+    {
+      "path": "examples/weather/src/main/kotlin/com/thelightphone/weather/WeatherPreferences.kt",
+      "review": "full_text_read",
+      "bytes": 501,
+      "sha256": "0dfd057586985bf91af273ea3e6b7cdddf994bda49939f482a4308b486323446",
+      "lines": 12
+    },
+    {
+      "path": "examples/weather/src/main/kotlin/com/thelightphone/weather/WeatherViewModel.kt",
+      "review": "full_text_read",
+      "bytes": 19669,
+      "sha256": "26f8ea0a06f96de3a666d79a67b0c4ed4a794a1863bae5318856b004f9d3772a",
+      "lines": 543
+    },
+    {
+      "path": "examples/weather/src/main/res/drawable/openmeteo.png",
+      "review": "binary_or_cryptographic_asset_inventoried",
+      "bytes": 7216,
+      "sha256": "45ebb66f5442b664a5e24dc833540f2ca74efd88f18ab4c0508c4bfc99e477a2"
+    },
+    {
+      "path": "examples/weather/src/test/kotlin/com/thelightphone/weather/WeatherModelsTest.kt",
+      "review": "full_text_read",
+      "bytes": 7058,
+      "sha256": "99fbf54a331f6e7dcee5d6c07065b65ad88c5a05d145906e50d16c56a84b7067",
+      "lines": 114
+    },
+    {
+      "path": "gradle.properties",
+      "review": "full_text_read",
+      "bytes": 123,
+      "sha256": "dda0ea1b37fbfc1c37c112c9a1b105f0c8770a98389b677931bbc6a26351d644",
+      "lines": 6
+    },
+    {
+      "path": "gradle/libs.versions.toml",
+      "review": "full_text_read",
+      "bytes": 5742,
+      "sha256": "fc9e4ca0c546bd506a345d188966a3af1a745a016e1f042a24ed2c9fdd459f68",
+      "lines": 83
+    },
+    {
+      "path": "gradle/wrapper/gradle-wrapper.jar",
+      "review": "binary_or_cryptographic_asset_inventoried",
+      "bytes": 60756,
+      "sha256": "91a239400bb638f36a1795d8fdf7939d532cdc7d794d1119b7261aac158b1e60",
+      "archiveEntries": 55
+    },
+    {
+      "path": "gradle/wrapper/gradle-wrapper.properties",
+      "review": "full_text_read",
+      "bytes": 232,
+      "sha256": "696c2c87ffa39808c2a98de734024801030d4b86631b3ba0c45a78bc8a77d5f1",
+      "lines": 6
+    },
+    {
+      "path": "gradlew",
+      "review": "full_text_read",
+      "bytes": 8070,
+      "sha256": "f96a757581fe5292465e3f3393380bd11fd8086d450b92e7c693da6513f583fe",
+      "lines": 234
+    },
+    {
+      "path": "gradlew.bat",
+      "review": "full_text_read",
+      "bytes": 2763,
+      "sha256": "af835f98787e9269af5a046edcb821a592fed372139df7b947b471a63cfc236b",
+      "lines": 89
+    },
+    {
+      "path": "lint-rules/build.gradle.kts",
+      "review": "full_text_read",
+      "bytes": 389,
+      "sha256": "c1fda96ed7d6b1c5a62685a5c1cf1edfcd8e44f232c550ed4323740069dfcdad",
+      "lines": 17
+    },
+    {
+      "path": "lint-rules/src/main/kotlin/com/thelightphone/lint/ActivityAccessDetector.kt",
+      "review": "full_text_read",
+      "bytes": 5421,
+      "sha256": "359d209bef28baab64c295b94a389c5e6af8fe957e1c6164153c0b441cb8ae78",
+      "lines": 122
+    },
+    {
+      "path": "lint-rules/src/main/kotlin/com/thelightphone/lint/LightJobDetector.kt",
+      "review": "full_text_read",
+      "bytes": 4286,
+      "sha256": "1d656412fe096f1f6ef3933eb1a3f353d31e094aec17ed72e557904b6f802487",
+      "lines": 98
+    },
+    {
+      "path": "lint-rules/src/main/kotlin/com/thelightphone/lint/LightSdkIssueRegistry.kt",
+      "review": "full_text_read",
+      "bytes": 775,
+      "sha256": "342e41a92a0688ea55d358cf6c18a9aa7b06271d8567ed2dcc40563ed1035eae",
+      "lines": 23
+    },
+    {
+      "path": "lint-rules/src/main/resources/META-INF/services/com.android.tools.lint.client.api.IssueRegistry",
+      "review": "full_text_read",
+      "bytes": 45,
+      "sha256": "daaea5b3078ed22180b657f25b6eae75ec273409b02a50b838985456c61257db",
+      "lines": 1
+    },
+    {
+      "path": "plugin/build.gradle.kts",
+      "review": "full_text_read",
+      "bytes": 1813,
+      "sha256": "4b56420693abfe2ff45010c99e9adaf050934b8405e3735dde010a2aca86b3cc",
+      "lines": 60
+    },
+    {
+      "path": "plugin/settings.gradle.kts",
+      "review": "full_text_read",
+      "bytes": 129,
+      "sha256": "c6e802db5a4af23d8a8e866ea15312799ad21c749e7f372c0fb0fada33ad6091",
+      "lines": 8
+    },
+    {
+      "path": "plugin/src/main/kotlin/com/thelightphone/plugin/DependencyViolations.kt",
+      "review": "full_text_read",
+      "bytes": 529,
+      "sha256": "d07324358657f0593380f307f987f3d78639b5307bbd3c433c71f6cb9b69021a",
+      "lines": 16
+    },
+    {
+      "path": "plugin/src/main/kotlin/com/thelightphone/plugin/LightSdkPlugin.kt",
+      "review": "full_text_read",
+      "bytes": 25916,
+      "sha256": "313ada71a95fb4aaa4ba4fb193610d499628aa8524e59cb7311581d85245e6b5",
+      "lines": 543
+    },
+    {
+      "path": "plugin/src/main/kotlin/com/thelightphone/plugin/LightSdkProcessor.kt",
+      "review": "full_text_read",
+      "bytes": 7173,
+      "sha256": "d9f3fa4712037072ab8317647496945d9ac61f510dbef3872e7743fff2e65b9f",
+      "lines": 170
+    },
+    {
+      "path": "plugin/src/main/kotlin/com/thelightphone/plugin/LightToolMetadata.kt",
+      "review": "full_text_read",
+      "bytes": 14171,
+      "sha256": "186c28aeca26fab0ea5524d2a58acbe26c027ad39e4bd53c89f3e9483aa53028",
+      "lines": 305
+    },
+    {
+      "path": "plugin/src/main/kotlin/com/thelightphone/plugin/ManifestGenerator.kt",
+      "review": "full_text_read",
+      "bytes": 7331,
+      "sha256": "849846d9ac3b8a1ae3fd8c2a43ebbb133d01c2402cb11eb2630559881a14397a",
+      "lines": 149
+    },
+    {
+      "path": "plugin/src/main/kotlin/com/thelightphone/plugin/ValidateResolvedDependenciesTask.kt",
+      "review": "full_text_read",
+      "bytes": 3161,
+      "sha256": "12664d3988f4bb919580c73f57b8fdda49dffb89e31df3c0a6a6afe8a413452f",
+      "lines": 68
+    },
+    {
+      "path": "plugin/src/main/resources/META-INF/services/com.google.devtools.ksp.processing.SymbolProcessorProvider",
+      "review": "full_text_read",
+      "bytes": 51,
+      "sha256": "00929e72c39d1af5b2088201dcce4c4be5eed65dad0e6929da6b13e62d3ade6d",
+      "lines": 1
+    },
+    {
+      "path": "plugin/src/main/resources/com/thelightphone/plugin/allowed-dependencies.txt",
+      "review": "full_text_read",
+      "bytes": 1395,
+      "sha256": "2fecfe32fa3ba157dcc83195352be13e1c1908a2b09a23f4b47fecd47c0907cf",
+      "lines": 39
+    },
+    {
+      "path": "plugin/src/main/resources/com/thelightphone/plugin/media3-version.txt",
+      "review": "full_text_read",
+      "bytes": 79,
+      "sha256": "f93df0690fe75b7c59cbdb00d1a2e6b0c137c5a44b084e84f3b38dc8f1c86493",
+      "lines": 2
+    },
+    {
+      "path": "plugin/src/main/resources/com/thelightphone/plugin/sdk-version.txt",
+      "review": "full_text_read",
+      "bytes": 81,
+      "sha256": "2fde5375ea4b83bd58cbd42dfe761b4beca45ccbdc17949fd943375e229acec6",
+      "lines": 2
+    },
+    {
+      "path": "plugin/src/test/kotlin/com/thelightphone/plugin/AudioDashCapabilityTest.kt",
+      "review": "full_text_read",
+      "bytes": 2022,
+      "sha256": "6eb65a815ed5ef3be96a9794e5cadda81b8ee2bd84392aae1cd004b0d4c35b6e",
+      "lines": 64
+    },
+    {
+      "path": "plugin/src/test/kotlin/com/thelightphone/plugin/LightSdkPluginValidationTest.kt",
+      "review": "full_text_read",
+      "bytes": 17886,
+      "sha256": "25a88960664560f8897eb19814a2bfdae6432b062f3c52e0370a1508e70719d4",
+      "lines": 458
+    },
+    {
+      "path": "plugin/src/test/kotlin/com/thelightphone/plugin/LightToolMetadataTest.kt",
+      "review": "full_text_read",
+      "bytes": 12667,
+      "sha256": "e564f968fc8f1903d8f9ae5784c55f068512cce5dee00ede8f7b3c14213a4cd9",
+      "lines": 362
+    },
+    {
+      "path": "plugin/src/test/kotlin/com/thelightphone/plugin/ManifestGeneratorTest.kt",
+      "review": "full_text_read",
+      "bytes": 8690,
+      "sha256": "60fbeb095a89d62c14ee229568aa6681b80a5e3696c68b9e9e72e0acfe0c4c35",
+      "lines": 217
+    },
+    {
+      "path": "sdk/build.gradle.kts",
+      "review": "full_text_read",
+      "bytes": 57,
+      "sha256": "244fdf3b61fc7b35886ef7129b1a8317bc787b8043e9f2aca308074edc0e08c7",
+      "lines": 1
+    },
+    {
+      "path": "sdk/client/README.md",
+      "review": "full_text_read",
+      "bytes": 29659,
+      "sha256": "dd98f313f4e0982097934023c161e5e13b6d21c3d5cc570b2f286ff8d67c1488",
+      "lines": 633
+    },
+    {
+      "path": "sdk/client/build.gradle.kts",
+      "review": "full_text_read",
+      "bytes": 2308,
+      "sha256": "408732f16926a1c7076c6af66f40f812f3c030a8a7274dd2c633a232a0589e8a",
+      "lines": 74
+    },
+    {
+      "path": "sdk/client/consumer-rules.pro",
+      "review": "full_text_read",
+      "bytes": 604,
+      "sha256": "dbefea1d7cdc922005627d41a924b4f0b63ca27e1657ac2f3fbf29fc758b4b7b",
+      "lines": 12
+    },
+    {
+      "path": "sdk/client/src/main/AndroidManifest.xml",
+      "review": "full_text_read",
+      "bytes": 992,
+      "sha256": "b7908dba17a6eaf9fb7dc56587068c16e0f946b02de6bc0213ed6d1e4dc6dec9",
+      "lines": 21
+    },
+    {
+      "path": "sdk/client/src/main/kotlin/com/thelightphone/sdk/EntryPoint.kt",
+      "review": "full_text_read",
+      "bytes": 1296,
+      "sha256": "6769b8d49f8aa068da622a5c81ea86bd9ade08b47b252a5be2158f3e407c2875",
+      "lines": 33
+    },
+    {
+      "path": "sdk/client/src/main/kotlin/com/thelightphone/sdk/InitialScreen.kt",
+      "review": "full_text_read",
+      "bytes": 173,
+      "sha256": "c03ec74542ef8d3079d710ce11c97d874b1c2313e07f81f73b1d87fb7ce8400b",
+      "lines": 8
+    },
+    {
+      "path": "sdk/client/src/main/kotlin/com/thelightphone/sdk/LightActivity.kt",
+      "review": "full_text_read",
+      "bytes": 9667,
+      "sha256": "472ef945a9bb22051ac51e76eeb52a773be758f9dd05a72bf5aa7f7b67dc5ada",
+      "lines": 246
+    },
+    {
+      "path": "sdk/client/src/main/kotlin/com/thelightphone/sdk/LightClientUiUtils.kt",
+      "review": "full_text_read",
+      "bytes": 4679,
+      "sha256": "89b25093abd777abba6d9582d6770755c4fa5ff7977d034f98de5b57653ed1f7",
+      "lines": 125
+    },
+    {
+      "path": "sdk/client/src/main/kotlin/com/thelightphone/sdk/LightConnectivity.kt",
+      "review": "full_text_read",
+      "bytes": 2594,
+      "sha256": "8eaf279fc95d262b9cb4db9c6cdd63432e770aebe9de6e5b421f2476794b0209",
+      "lines": 74
+    },
+    {
+      "path": "sdk/client/src/main/kotlin/com/thelightphone/sdk/LightDb.kt",
+      "review": "full_text_read",
+      "bytes": 282,
+      "sha256": "6d33812043ffaf238e5ec8ce651d7da7b265fe103638ed80cba9c8c2f0e2abf9",
+      "lines": 8
+    },
+    {
+      "path": "sdk/client/src/main/kotlin/com/thelightphone/sdk/LightFileShare.kt",
+      "review": "full_text_read",
+      "bytes": 2161,
+      "sha256": "dbdd51f09c50c6fe731d0e2e9cf67b085b73224275f2fc3316c0ff5817f0c88f",
+      "lines": 69
+    },
+    {
+      "path": "sdk/client/src/main/kotlin/com/thelightphone/sdk/LightHapticsManager.kt",
+      "review": "full_text_read",
+      "bytes": 1527,
+      "sha256": "85657a9b4d4342e033d5bffb150ce4c3cd1ccde2684750d65786d1ba63da60dc",
+      "lines": 48
+    },
+    {
+      "path": "sdk/client/src/main/kotlin/com/thelightphone/sdk/LightKeyboardManager.kt",
+      "review": "full_text_read",
+      "bytes": 2668,
+      "sha256": "291d7d0a45b5982c94fb49aad7c66d4e140d7af63ce5f4c14efb76f2a24b87c3",
+      "lines": 73
+    },
+    {
+      "path": "sdk/client/src/main/kotlin/com/thelightphone/sdk/LightPushManager.kt",
+      "review": "full_text_read",
+      "bytes": 1477,
+      "sha256": "da63b014ae96225f0132f4acbe51a34d05437ef86ca7098e008ca85334e32998",
+      "lines": 41
+    },
+    {
+      "path": "sdk/client/src/main/kotlin/com/thelightphone/sdk/LightPushService.kt",
+      "review": "full_text_read",
+      "bytes": 1917,
+      "sha256": "f9d14848e29e45ae088f8d85c6b9f338de583700f8d39de7faf415d4e03c461c",
+      "lines": 62
+    },
+    {
+      "path": "sdk/client/src/main/kotlin/com/thelightphone/sdk/LightScreen.kt",
+      "review": "full_text_read",
+      "bytes": 2977,
+      "sha256": "b79a30ca6d4e3317850a0dd1af7c379417cd47395c915b11a04faaf8b186fdc4",
+      "lines": 104
+    },
+    {
+      "path": "sdk/client/src/main/kotlin/com/thelightphone/sdk/LightSdkApplication.kt",
+      "review": "full_text_read",
+      "bytes": 3356,
+      "sha256": "8923e97c85aaf4f241f8a4b9fef7c2d486d60370f0aaf1e6b5dd4a1e6452e9f1",
+      "lines": 85
+    },
+    {
+      "path": "sdk/client/src/main/kotlin/com/thelightphone/sdk/LightSdkReceiver.kt",
+      "review": "full_text_read",
+      "bytes": 547,
+      "sha256": "f5f89e6550f605219c7afcb5939da67ce1c87cf29e37a3ff8c68bc0ebb95e1ab",
+      "lines": 16
+    },
+    {
+      "path": "sdk/client/src/main/kotlin/com/thelightphone/sdk/LightSdkRegistry.kt",
+      "review": "full_text_read",
+      "bytes": 888,
+      "sha256": "46da7940726a1211b55434bc3c0d2a2e2a2245e18f626dac768130c91a48cf8a",
+      "lines": 25
+    },
+    {
+      "path": "sdk/client/src/main/kotlin/com/thelightphone/sdk/LightServiceConnection.kt",
+      "review": "full_text_read",
+      "bytes": 8285,
+      "sha256": "bfba8f245bdd255ca4008d40f353e86b16feb1e84dc863ed71eb6a58da702b3e",
+      "lines": 225
+    },
+    {
+      "path": "sdk/client/src/main/kotlin/com/thelightphone/sdk/LightToolManagerJobBridge.kt",
+      "review": "full_text_read",
+      "bytes": 2308,
+      "sha256": "9afc4078a4c08c9348f928a64fb1814f61c5b9b578a2c66cf97792a16ef16a79",
+      "lines": 56
+    },
+    {
+      "path": "sdk/client/src/main/kotlin/com/thelightphone/sdk/LightToolManagerNotifyJob.kt",
+      "review": "full_text_read",
+      "bytes": 817,
+      "sha256": "4a16890b167b8940b8258c52858379be603c64b14bccf00858685e53ca63ed8f",
+      "lines": 25
+    },
+    {
+      "path": "sdk/client/src/main/kotlin/com/thelightphone/sdk/LightViewModel.kt",
+      "review": "full_text_read",
+      "bytes": 471,
+      "sha256": "8c0736534dd2105c549fdafece6956515fde8c2b9e30e1ecdda9682b735a707d",
+      "lines": 15
+    },
+    {
+      "path": "sdk/client/src/main/kotlin/com/thelightphone/sdk/LightWork.kt",
+      "review": "full_text_read",
+      "bytes": 10597,
+      "sha256": "ba63cba8a631008f398120d766040dc71acf3a87931a999c5bff553f7ac9d9f1",
+      "lines": 258
+    },
+    {
+      "path": "sdk/client/src/main/kotlin/com/thelightphone/sdk/audio/AudioExceptions.kt",
+      "review": "full_text_read",
+      "bytes": 1355,
+      "sha256": "fe7e75c51b9f850d86ed83abef705477b0dbd1cfd78f983ad6c4494b5b7f9895",
+      "lines": 37
+    },
+    {
+      "path": "sdk/client/src/main/kotlin/com/thelightphone/sdk/audio/AudioFocusHelper.kt",
+      "review": "full_text_read",
+      "bytes": 769,
+      "sha256": "cf8a31ca550b31543edfc0caba4a98878c739ecf63754a6e03d43e92aa893298",
+      "lines": 25
+    },
+    {
+      "path": "sdk/client/src/main/kotlin/com/thelightphone/sdk/audio/AudioTypes.kt",
+      "review": "full_text_read",
+      "bytes": 9272,
+      "sha256": "1d3d0e533fb6e7743f5a69c8cb47a8f121e3cfc11e62c52571b5256e57a78bf4",
+      "lines": 246
+    },
+    {
+      "path": "sdk/client/src/main/kotlin/com/thelightphone/sdk/audio/DetachedAudioCapability.kt",
+      "review": "full_text_read",
+      "bytes": 907,
+      "sha256": "f4a1151d2630fa91abecd3fd6f1dd3f38cb90fef95f0447369126ceb699e481f",
+      "lines": 24
+    },
+    {
+      "path": "sdk/client/src/main/kotlin/com/thelightphone/sdk/audio/DetachedConnectionHints.kt",
+      "review": "full_text_read",
+      "bytes": 1368,
+      "sha256": "915f60b0e6872798fe4e472a5913da0a56470db0c8efcb26ba73be6f4722d47d",
+      "lines": 35
+    },
+    {
+      "path": "sdk/client/src/main/kotlin/com/thelightphone/sdk/audio/DetachedSessionState.kt",
+      "review": "full_text_read",
+      "bytes": 3499,
+      "sha256": "0ea8b8bd07954fbed6702fa46707aceec3b6768f718e6bc15e18ad973faf2ddd",
+      "lines": 95
+    },
+    {
+      "path": "sdk/client/src/main/kotlin/com/thelightphone/sdk/audio/LightAudio.kt",
+      "review": "full_text_read",
+      "bytes": 4481,
+      "sha256": "48021d0382eecc4947d81c4f568b86617cda2c73bbcb6a90949a2d774b9dae4b",
+      "lines": 116
+    },
+    {
+      "path": "sdk/client/src/main/kotlin/com/thelightphone/sdk/audio/LightAudioCapture.kt",
+      "review": "full_text_read",
+      "bytes": 5032,
+      "sha256": "dd6e3370b553d4a590f3ec86c44af705fb3ff1e7709a1d62b827a1554a1eaaf7",
+      "lines": 139
+    },
+    {
+      "path": "sdk/client/src/main/kotlin/com/thelightphone/sdk/audio/LightAudioPlayer.kt",
+      "review": "full_text_read",
+      "bytes": 17183,
+      "sha256": "fd97543887dcaca5dd38137e00d5678b8fd0845ea03a6b203ca786e9b3b03b86",
+      "lines": 476
+    },
+    {
+      "path": "sdk/client/src/main/kotlin/com/thelightphone/sdk/audio/LightAudioRecorder.kt",
+      "review": "full_text_read",
+      "bytes": 3435,
+      "sha256": "b15d5cf0bbbfd2727ab082379405740a4e408ad1610c84250b6568aa04579622",
+      "lines": 104
+    },
+    {
+      "path": "sdk/client/src/main/kotlin/com/thelightphone/sdk/audio/LightAudioService.kt",
+      "review": "full_text_read",
+      "bytes": 6268,
+      "sha256": "a49eb3d050b05fddb9c571f6b00e63bdd1bb58c9e58cc79d7393cee7598783aa",
+      "lines": 152
+    },
+    {
+      "path": "sdk/client/src/main/kotlin/com/thelightphone/sdk/audio/LightAudioVoice.kt",
+      "review": "full_text_read",
+      "bytes": 4448,
+      "sha256": "b12974597597e6b0de18cdba1f9060ba8efda4e4411911d997734542245fb90c",
+      "lines": 135
+    },
+    {
+      "path": "sdk/client/src/main/kotlin/com/thelightphone/sdk/audio/LightMediaCache.kt",
+      "review": "full_text_read",
+      "bytes": 1184,
+      "sha256": "e200f69e12d71a37eaa1be3ebf9eac24ab8b32331f973ca152fce0cc64fbcb88",
+      "lines": 30
+    },
+    {
+      "path": "sdk/client/src/main/kotlin/com/thelightphone/sdk/audio/PendingPlayerCommands.kt",
+      "review": "full_text_read",
+      "bytes": 2076,
+      "sha256": "6aec0029d4af89544cc421cf068570216a5d190bbe36a23a5fa4728e58248db8",
+      "lines": 69
+    },
+    {
+      "path": "sdk/client/src/main/kotlin/com/thelightphone/sdk/audio/SdkExoPlayer.kt",
+      "review": "full_text_read",
+      "bytes": 3514,
+      "sha256": "c3bf438601d8ebcd9eb47590d43737222dce4e7504651cdb01e2908f20a42042",
+      "lines": 92
+    },
+    {
+      "path": "sdk/client/src/main/kotlin/com/thelightphone/sdk/nfc/LightIsoDep.kt",
+      "review": "full_text_read",
+      "bytes": 1634,
+      "sha256": "eaeadb6b2fb35c16e77993d9ea135aed28bbd2ba8fbb7b07339a4a8aae4a639c",
+      "lines": 51
+    },
+    {
+      "path": "sdk/client/src/main/kotlin/com/thelightphone/sdk/nfc/LightNfc.kt",
+      "review": "full_text_read",
+      "bytes": 1299,
+      "sha256": "7aa152a4c91c5ab396eace14c5e2bf55bd185a3eac05d7edf530be0d7d81183d",
+      "lines": 36
+    },
+    {
+      "path": "sdk/client/src/main/kotlin/com/thelightphone/sdk/nfc/LightNfcReader.kt",
+      "review": "full_text_read",
+      "bytes": 6047,
+      "sha256": "b01769243e5e33b0562f024cc4467121d48d6e3ca5b784aa81252c67025c7230",
+      "lines": 159
+    },
+    {
+      "path": "sdk/client/src/main/kotlin/com/thelightphone/sdk/nfc/LightNfcTypes.kt",
+      "review": "full_text_read",
+      "bytes": 2173,
+      "sha256": "a11fe1aa374eede269f031227ef1f7d5109ed19a5b9c27ad028d8530def85a1d",
+      "lines": 71
+    },
+    {
+      "path": "sdk/client/src/main/kotlin/com/thelightphone/sdk/nfc/NdefDecoding.kt",
+      "review": "full_text_read",
+      "bytes": 3207,
+      "sha256": "fac5a27bb3417eec9b9adf21879e3bec4caa31dd86ccd8a0beb18db3337e8190",
+      "lines": 90
+    },
+    {
+      "path": "sdk/client/src/main/kotlin/com/thelightphone/sdk/nfc/NfcExceptions.kt",
+      "review": "full_text_read",
+      "bytes": 1260,
+      "sha256": "ea056a66946796edaa6e0043041cd219500761f847838224a485a295d7ed57be",
+      "lines": 25
+    },
+    {
+      "path": "sdk/client/src/main/res/drawable/loading_text_icon.xml",
+      "review": "xml_structure_inspected",
+      "bytes": 5512,
+      "sha256": "b0403ad0302f686e0e014cbd2a4a6786ed2ea40859d50a4c70b33b1200ee3737"
+    },
+    {
+      "path": "sdk/client/src/main/res/values/themes.xml",
+      "review": "full_text_read",
+      "bytes": 1076,
+      "sha256": "93a123880fa950c1d8271702fd975cdbc18daeab0095d080d78956cceff8a582",
+      "lines": 21
+    },
+    {
+      "path": "sdk/client/src/test/kotlin/com/thelightphone/sdk/LightNfcTapStateTest.kt",
+      "review": "full_text_read",
+      "bytes": 1312,
+      "sha256": "239f43ad69987291d2ec3705f5e092080ac0f7e509600656dbec6a06b36bde63",
+      "lines": 43
+    },
+    {
+      "path": "sdk/client/src/test/kotlin/com/thelightphone/sdk/audio/AudioTypesTest.kt",
+      "review": "full_text_read",
+      "bytes": 2330,
+      "sha256": "9132e19468e482e409934bd7d8e7715c96fadfc2853f15a44595a354b3b793b4",
+      "lines": 66
+    },
+    {
+      "path": "sdk/client/src/test/kotlin/com/thelightphone/sdk/audio/LightAudioCaptureTest.kt",
+      "review": "full_text_read",
+      "bytes": 544,
+      "sha256": "02d9ace8d763ed17d0eeb501a8068c6658b914623e7a2df26bcb41df75ae195e",
+      "lines": 20
+    },
+    {
+      "path": "sdk/client/src/test/kotlin/com/thelightphone/sdk/audio/LightAudioPlayerTest.kt",
+      "review": "full_text_read",
+      "bytes": 9451,
+      "sha256": "237afd8f690fe2d7baaf6994b0dbb11abad17709df33bf4ed6a9f5381db27abf",
+      "lines": 269
+    },
+    {
+      "path": "sdk/client/src/test/kotlin/com/thelightphone/sdk/audio/LightAudioServiceTest.kt",
+      "review": "full_text_read",
+      "bytes": 2544,
+      "sha256": "39740c707a395027ce0be674795632956511ae113f296beb5f33dbaa6de97501",
+      "lines": 85
+    },
+    {
+      "path": "sdk/client/src/test/kotlin/com/thelightphone/sdk/audio/LightMediaCacheTest.kt",
+      "review": "full_text_read",
+      "bytes": 4216,
+      "sha256": "ddb64e0388be9350a0a6f04f4bd1d6ce9c84405035fb5631cf2d338bee839290",
+      "lines": 117
+    },
+    {
+      "path": "sdk/client/src/test/kotlin/com/thelightphone/sdk/nfc/LightIsoDepTest.kt",
+      "review": "full_text_read",
+      "bytes": 1332,
+      "sha256": "df5ecaa043dec7d198e8e8a83e8db1da58d472db5b089cd87c745d51de3927c3",
+      "lines": 48
+    },
+    {
+      "path": "sdk/client/src/test/kotlin/com/thelightphone/sdk/nfc/LightNfcTypesTest.kt",
+      "review": "full_text_read",
+      "bytes": 3683,
+      "sha256": "ce8dc8a3dbffa26f55dcfafdc37cca0f78f61d53aeaf6a53108b47633b4e4076",
+      "lines": 117
+    },
+    {
+      "path": "sdk/client/src/test/kotlin/com/thelightphone/sdk/nfc/NdefDecodingTest.kt",
+      "review": "full_text_read",
+      "bytes": 7577,
+      "sha256": "bcfb08e142142e89779b42c3a0fe5c25dcccf23d40041022239fb040eb8a0144",
+      "lines": 222
+    },
+    {
+      "path": "sdk/emulator/.gitignore",
+      "review": "full_text_read",
+      "bytes": 5,
+      "sha256": "461a104791a26ca026d41bb8b50f843613d0dfe4e2141c6513538366d7b35bb1",
+      "lines": 1
+    },
+    {
+      "path": "sdk/emulator/build.gradle.kts",
+      "review": "full_text_read",
+      "bytes": 3010,
+      "sha256": "cfe23c2cafd4831f568dc32a1e6734fc2aef2dd14502dc81201c0176862d6f8a",
+      "lines": 94
+    },
+    {
+      "path": "sdk/emulator/src/main/AndroidManifest.xml",
+      "review": "full_text_read",
+      "bytes": 1394,
+      "sha256": "915acb3d74b1e2e2fbba0b16da3d75214cccc0e95c22e7831b6624f820267dba",
+      "lines": 34
+    },
+    {
+      "path": "sdk/emulator/src/main/kotlin/com/thelightphone/sdk/emulator/EmulatorApplication.kt",
+      "review": "full_text_read",
+      "bytes": 6996,
+      "sha256": "c97c2fa76f4a635ec98e698762c14c9c6c56e87064efebb6fa385c8ce852243a",
+      "lines": 160
+    },
+    {
+      "path": "sdk/emulator/src/main/kotlin/com/thelightphone/sdk/emulator/EmulatorDeviceKeyHandler.kt",
+      "review": "full_text_read",
+      "bytes": 4972,
+      "sha256": "b1784162fbcb7eefa0f8b080e9318202c1f1dd0f6a653e5c5875220988bad9c1",
+      "lines": 125
+    },
+    {
+      "path": "sdk/emulator/src/main/kotlin/com/thelightphone/sdk/emulator/EmulatorLocationHelper.kt",
+      "review": "full_text_read",
+      "bytes": 3713,
+      "sha256": "8ed2bf292cd1e3b7416ac340f64131d4f2a5c6965b331a6c07a428f3fbacfec8",
+      "lines": 96
+    },
+    {
+      "path": "sdk/emulator/src/main/kotlin/com/thelightphone/sdk/emulator/EmulatorNavController.kt",
+      "review": "full_text_read",
+      "bytes": 600,
+      "sha256": "657dc36eaf4666efd56bd030fbe715ddf2992d37111272941a749764daa3631f",
+      "lines": 22
+    },
+    {
+      "path": "sdk/emulator/src/main/kotlin/com/thelightphone/sdk/emulator/EmulatorSettings.kt",
+      "review": "full_text_read",
+      "bytes": 12001,
+      "sha256": "5da1a04db59c71033766e2340641ba28bccb76d6718407115490dfd485eae0c3",
+      "lines": 310
+    },
+    {
+      "path": "sdk/emulator/src/main/kotlin/com/thelightphone/sdk/emulator/LightAudioManager.kt",
+      "review": "full_text_read",
+      "bytes": 3930,
+      "sha256": "a3ea861231c5436557ffb071c4648356981a72897feadbb6466eec7d24509db7",
+      "lines": 106
+    },
+    {
+      "path": "sdk/emulator/src/main/kotlin/com/thelightphone/sdk/emulator/LightSdkPermissionActivity.kt",
+      "review": "full_text_read",
+      "bytes": 6415,
+      "sha256": "32e8aa8fb893bddbb660b146b0ebe27c1b01599e26d7e53a3ee78ff71da0ec6c",
+      "lines": 156
+    },
+    {
+      "path": "sdk/emulator/src/main/kotlin/com/thelightphone/sdk/emulator/MainActivity.kt",
+      "review": "full_text_read",
+      "bytes": 10803,
+      "sha256": "8448d2fa11d8aab8cfeff4819956c26ff1da0a14f47129bd1a0193080e9cb050",
+      "lines": 280
+    },
+    {
+      "path": "sdk/emulator/src/main/kotlin/com/thelightphone/sdk/emulator/ToolManagerActivity.kt",
+      "review": "full_text_read",
+      "bytes": 7741,
+      "sha256": "1fff9933e12d3da55e465cf06b4aebd49c885b1251befb40a0d240c066d5a78e",
+      "lines": 220
+    },
+    {
+      "path": "sdk/emulator/src/main/kotlin/com/thelightphone/sdk/emulator/http/EmulatorHttpServer.kt",
+      "review": "full_text_read",
+      "bytes": 4464,
+      "sha256": "ecae8052c7fad67e337b75665fc155976ff1ce4f523c1a328186c0cc14699735",
+      "lines": 109
+    },
+    {
+      "path": "sdk/emulator/src/main/res/values/themes.xml",
+      "review": "full_text_read",
+      "bytes": 543,
+      "sha256": "ecea0765d4d1202d6fb4fb8fd5f7b477e4b958eefe9de6206f468be5a7a0763f",
+      "lines": 12
+    },
+    {
+      "path": "sdk/keys/lightsdk-dev.jks",
+      "review": "binary_or_cryptographic_asset_inventoried",
+      "bytes": 2253,
+      "sha256": "bb0986e745fb13eebeaf0f916251ea0fd55608b6609d5412731a9a6ce7d34fcb"
+    },
+    {
+      "path": "sdk/server/build.gradle.kts",
+      "review": "full_text_read",
+      "bytes": 1610,
+      "sha256": "0c1c53fa425e01076ded7a1bb6c69975f0e91f6f54033094663740864c5aaaf8",
+      "lines": 61
+    },
+    {
+      "path": "sdk/server/src/main/AndroidManifest.xml",
+      "review": "full_text_read",
+      "bytes": 1555,
+      "sha256": "bd5ef1ed04ff1a10b3a86e6af3a99f429a5df1e5e336482d272228f8946731dc",
+      "lines": 35
+    },
+    {
+      "path": "sdk/server/src/main/kotlin/com/thelightphone/sdk/server/LightPushDb.kt",
+      "review": "full_text_read",
+      "bytes": 2309,
+      "sha256": "3c2b7e22b49b23892d8431e8a5639cd34ce16a454b24d6be3ba80c173c7dd009",
+      "lines": 66
+    },
+    {
+      "path": "sdk/server/src/main/kotlin/com/thelightphone/sdk/server/LightPushDistributor.kt",
+      "review": "full_text_read",
+      "bytes": 6911,
+      "sha256": "18fa88f29fc1711420e1b5902c268c55c6e1a0d3d16a0932f631e0e118757fdc",
+      "lines": 182
+    },
+    {
+      "path": "sdk/server/src/main/kotlin/com/thelightphone/sdk/server/LightPushRegistry.kt",
+      "review": "full_text_read",
+      "bytes": 1990,
+      "sha256": "7f09428bb2971e9430b02d5fdf558d3cfdd62ecb9cb1292ab572dc2cd5e1d133",
+      "lines": 60
+    },
+    {
+      "path": "sdk/server/src/main/kotlin/com/thelightphone/sdk/server/LightSdkServer.kt",
+      "review": "full_text_read",
+      "bytes": 17561,
+      "sha256": "361a190fcc02badffb603992a33f129bd66ebd8cc143a147b6cc5b68313b17b7",
+      "lines": 462
+    },
+    {
+      "path": "sdk/server/src/main/kotlin/com/thelightphone/sdk/server/LightSdkServerSettings.kt",
+      "review": "full_text_read",
+      "bytes": 5429,
+      "sha256": "7f64d82a6e8e607914caa752f7791897c4a33ab21253d427f4ea2f530a03cae2",
+      "lines": 132
+    },
+    {
+      "path": "sdk/server/src/main/kotlin/com/thelightphone/sdk/server/LightSdkService.kt",
+      "review": "full_text_read",
+      "bytes": 12595,
+      "sha256": "b87e10e96a77aa07ac90f1c585ce3981a6575cc01deb42443b93f138fb1a4a23",
+      "lines": 294
+    },
+    {
+      "path": "sdk/server/src/main/kotlin/com/thelightphone/sdk/server/installer/LightApkInboxScanWorker.kt",
+      "review": "full_text_read",
+      "bytes": 2081,
+      "sha256": "2b89c93cc5e67442e6237347e54b48f915c53157bb110e30edf9f416accf9937",
+      "lines": 59
+    },
+    {
+      "path": "sdk/server/src/main/kotlin/com/thelightphone/sdk/server/installer/LightApkInstallResultReceiver.kt",
+      "review": "full_text_read",
+      "bytes": 1521,
+      "sha256": "137078d633559bb7754177b2165916209ed240898bbcedaccd9919b9f207f75e",
+      "lines": 40
+    },
+    {
+      "path": "sdk/server/src/main/kotlin/com/thelightphone/sdk/server/installer/LightApkInstallWorker.kt",
+      "review": "full_text_read",
+      "bytes": 3242,
+      "sha256": "81321eb2a28a8444c181d98467fe87e6ea1e3e59ef44ef79a73869941839d78e",
+      "lines": 99
+    },
+    {
+      "path": "sdk/server/src/main/kotlin/com/thelightphone/sdk/server/toolmanager/DeveloperModeDataTree.kt",
+      "review": "full_text_read",
+      "bytes": 6409,
+      "sha256": "b07787662d0413b8037763f893468463b6780aa34dd8c3cbb5db9b0ed1c022f5",
+      "lines": 148
+    },
+    {
+      "path": "sdk/server/src/main/kotlin/com/thelightphone/sdk/server/toolmanager/ToolManagerLifecycleWrapperService.kt",
+      "review": "full_text_read",
+      "bytes": 4865,
+      "sha256": "9779ebab68eadac9c873f2fafe363f1a6bf2b1cca7af903fb1f1a04e25d7f639",
+      "lines": 134
+    },
+    {
+      "path": "sdk/shared/build.gradle.kts",
+      "review": "full_text_read",
+      "bytes": 987,
+      "sha256": "9bf86bef50d6cf91a894bcc243e7c8aadaab413ca12415f037ae11f1cbf2a97f",
+      "lines": 37
+    },
+    {
+      "path": "sdk/shared/src/main/kotlin/com/thelightphone/sdk/shared/LightConstants.kt",
+      "review": "full_text_read",
+      "bytes": 785,
+      "sha256": "ce768e8d78717e5706fcce825c162bc396997fc2f9841e4d20c8213e38e63244",
+      "lines": 20
+    },
+    {
+      "path": "sdk/shared/src/main/kotlin/com/thelightphone/sdk/shared/LightResult.kt",
+      "review": "full_text_read",
+      "bytes": 1094,
+      "sha256": "ab8357ad58b3f3d014a3ccc8e17abbbe0a4d6d3e1b1006e825c3ad77d974f727",
+      "lines": 32
+    },
+    {
+      "path": "sdk/shared/src/main/kotlin/com/thelightphone/sdk/shared/LightServerData.kt",
+      "review": "full_text_read",
+      "bytes": 241,
+      "sha256": "fbbc686a55879e4e35eb89b7d6f0ff22665d213d89ad39fee5b9f6558a878e91",
+      "lines": 6
+    },
+    {
+      "path": "sdk/shared/src/main/kotlin/com/thelightphone/sdk/shared/LightServiceMethod.kt",
+      "review": "full_text_read",
+      "bytes": 8169,
+      "sha256": "648c2ba128ce3d475595e4dc0775a2c0c22f4237c63beb4aca4eea37dbff2c9f",
+      "lines": 217
+    },
+    {
+      "path": "sdk/shared/src/test/kotlin/com/thelightphone/sdk/shared/LightResultTest.kt",
+      "review": "full_text_read",
+      "bytes": 675,
+      "sha256": "7d5a8c7e7bdc96b10b6430f91e077df78dc46327898c85bb8dd1d3585e42fead",
+      "lines": 20
+    },
+    {
+      "path": "sdk/shared/src/test/kotlin/com/thelightphone/sdk/shared/LightServiceMethodTest.kt",
+      "review": "full_text_read",
+      "bytes": 1303,
+      "sha256": "847566494f7adc9133f2c2ab6dab68a388376bd63995c701b0045efd6ccc0dc9",
+      "lines": 40
+    },
+    {
+      "path": "sdk/trust/build.gradle.kts",
+      "review": "full_text_read",
+      "bytes": 2227,
+      "sha256": "ae7965ba355bce9cce748c74b5cc7e3d1fc5bf94ea4a26a76da46d241a670709",
+      "lines": 61
+    },
+    {
+      "path": "sdk/trust/src/main/kotlin/com/thelightphone/sdk/trust/LightInstallPolicy.kt",
+      "review": "full_text_read",
+      "bytes": 7729,
+      "sha256": "d477addc2ef7f53ab990805a4c576d535be8360b477f8191e944a6f08cfbf4d6",
+      "lines": 196
+    },
+    {
+      "path": "sdk/trust/src/main/kotlin/com/thelightphone/sdk/trust/LightTrustBundle.kt",
+      "review": "full_text_read",
+      "bytes": 1017,
+      "sha256": "3bf03d9dbe9ab086aa392825a5f30a250e97f8fc49b60869dc569a96abb6951b",
+      "lines": 25
+    },
+    {
+      "path": "sdk/trust/src/main/kotlin/com/thelightphone/sdk/trust/LightTrustBundleFormat.kt",
+      "review": "full_text_read",
+      "bytes": 507,
+      "sha256": "c42d2c623e26ee20a9aa5ac5be3ecdc5afeab8bf090ad38a76943fc62d34ffd2",
+      "lines": 14
+    },
+    {
+      "path": "sdk/trust/src/main/kotlin/com/thelightphone/sdk/trust/LightTrustBundleVerifier.kt",
+      "review": "full_text_read",
+      "bytes": 2476,
+      "sha256": "1db7a62f393d1a41279c1cfaddd72335fbf77d083f89286d2a3fd52a20a86297",
+      "lines": 62
+    },
+    {
+      "path": "sdk/trust/src/main/kotlin/com/thelightphone/sdk/trust/LightTrustStatement.kt",
+      "review": "full_text_read",
+      "bytes": 417,
+      "sha256": "598a45b1c8046e0f02bec796f5f767b7f558827b87c831c9b0604b5305c40f02",
+      "lines": 19
+    },
+    {
+      "path": "sdk/trust/src/main/kotlin/com/thelightphone/sdk/trust/LightTrustStore.kt",
+      "review": "full_text_read",
+      "bytes": 4130,
+      "sha256": "c1162d5705166bc1e832dbbb52c2d49911aa348c46e929ceb63e44e342e0f86b",
+      "lines": 100
+    },
+    {
+      "path": "sdk/trust/src/main/kotlin/com/thelightphone/sdk/trust/StampVerifier.kt",
+      "review": "full_text_read",
+      "bytes": 417,
+      "sha256": "508b6b97b1d2b2c3dfa4cb19242f1d5879e014d5b47f2d0b4892533844cc08b9",
+      "lines": 16
+    },
+    {
+      "path": "sdk/trust/src/main/kotlin/com/thelightphone/sdk/trust/TrustParsers.kt",
+      "review": "full_text_read",
+      "bytes": 6094,
+      "sha256": "21bc5a811ee579542cc13447627ea6c7a4059998f138039bb1e300bcd641529a",
+      "lines": 115
+    },
+    {
+      "path": "sdk/trust/src/main/kotlin/com/thelightphone/sdk/trust/TrustResult.kt",
+      "review": "full_text_read",
+      "bytes": 975,
+      "sha256": "3efd11d753ab6d59b85cd19703bfe215f766b472a20167c7d87b32608acc6929",
+      "lines": 24
+    },
+    {
+      "path": "sdk/trust/src/test/kotlin/com/thelightphone/sdk/trust/ApkSigStampVerifier.kt",
+      "review": "full_text_read",
+      "bytes": 1202,
+      "sha256": "7c99b3555acb8552a4bb5dca13ded12c5bfaeedaf490af8e624311ea8280c64b",
+      "lines": 29
+    },
+    {
+      "path": "sdk/trust/src/test/kotlin/com/thelightphone/sdk/trust/LightInstallPolicyTest.kt",
+      "review": "full_text_read",
+      "bytes": 14990,
+      "sha256": "2e81f7cc347166e15b5d67679e8b9b9500b6165bcfa1e252cb9278b3b3f5aba1",
+      "lines": 285
+    },
+    {
+      "path": "sdk/trust/src/test/kotlin/com/thelightphone/sdk/trust/LightTrustBundleFormatTest.kt",
+      "review": "full_text_read",
+      "bytes": 358,
+      "sha256": "83d51de94aaffc153cb29c85169512821eace849aa414d4bc3791f0226bddaba",
+      "lines": 14
+    },
+    {
+      "path": "sdk/trust/src/test/kotlin/com/thelightphone/sdk/trust/StampVerifierTest.kt",
+      "review": "full_text_read",
+      "bytes": 841,
+      "sha256": "a1a54381821337bf36c8d3cbc6352a719f24c04e34d5068572ae32373c35911f",
+      "lines": 25
+    },
+    {
+      "path": "sdk/trust/src/test/kotlin/com/thelightphone/sdk/trust/TrustBundleTest.kt",
+      "review": "full_text_read",
+      "bytes": 19223,
+      "sha256": "ca329896dd9775202b464326dda932a2186c16c0ff66557911728656572991b6",
+      "lines": 392
+    },
+    {
+      "path": "sdk/ui/.gitignore",
+      "review": "full_text_read",
+      "bytes": 18,
+      "sha256": "937483cbd399793b4029504b06d1cafb2180503c86204c543e74a03c17a6335c",
+      "lines": 1
+    },
+    {
+      "path": "sdk/ui/build.gradle.kts",
+      "review": "full_text_read",
+      "bytes": 2046,
+      "sha256": "0fa16d63056e2633be1b76d8bc997d6735b374f97b069b3332bcfb38befc04af",
+      "lines": 66
+    },
+    {
+      "path": "sdk/ui/consumer-rules.pro",
+      "review": "full_text_read",
+      "bytes": 140,
+      "sha256": "42f35850f3eee9d6381ddd2d02f54df299b8e2cd5ef6b20c0fde24cbe6f2f799",
+      "lines": 4
+    },
+    {
+      "path": "sdk/ui/src/main/AndroidManifest.xml",
+      "review": "full_text_read",
+      "bytes": 353,
+      "sha256": "82f81993406a6d90d19be436f09ebe8c7928b00e2c0200464b8d54aef8d92fbd",
+      "lines": 8
+    },
+    {
+      "path": "sdk/ui/src/main/kotlin/com/thelightphone/sdk/LightVibrator.kt",
+      "review": "full_text_read",
+      "bytes": 4502,
+      "sha256": "ad3e09947efaab148cda286a5f4009d200a7dffbcb429b549c85693132f20b87",
+      "lines": 128
+    },
+    {
+      "path": "sdk/ui/src/main/kotlin/com/thelightphone/sdk/ui/LightBarButton.kt",
+      "review": "full_text_read",
+      "bytes": 3359,
+      "sha256": "c58380f51d5bac3d3eaf6413a652a0ecfaa30faa2f2f91dd8c6b7aa89d0f2226",
+      "lines": 111
+    },
+    {
+      "path": "sdk/ui/src/main/kotlin/com/thelightphone/sdk/ui/LightBottomBar.kt",
+      "review": "full_text_read",
+      "bytes": 6993,
+      "sha256": "945e98d7c2ef45fe3e0755b11a3f1c82856ef0bd790ae74f0753fba9283f31e9",
+      "lines": 201
+    },
+    {
+      "path": "sdk/ui/src/main/kotlin/com/thelightphone/sdk/ui/LightClickable.kt",
+      "review": "full_text_read",
+      "bytes": 1700,
+      "sha256": "b45441acec191d217cab40b93ebdca96112cc848b598bf3e6a40190311e49d8b",
+      "lines": 49
+    },
+    {
+      "path": "sdk/ui/src/main/kotlin/com/thelightphone/sdk/ui/LightFont.kt",
+      "review": "full_text_read",
+      "bytes": 1895,
+      "sha256": "733fa171e7276bc3bcdf162511a9328cb131c12c1c838f345030facc6766a2d6",
+      "lines": 46
+    },
+    {
+      "path": "sdk/ui/src/main/kotlin/com/thelightphone/sdk/ui/LightFullscreenModal.kt",
+      "review": "full_text_read",
+      "bytes": 1780,
+      "sha256": "cdb41d23c1e5eb2c0a022bccf1937d5a5c820505d99c65feea0476aa5c834aa0",
+      "lines": 62
+    },
+    {
+      "path": "sdk/ui/src/main/kotlin/com/thelightphone/sdk/ui/LightGrid.kt",
+      "review": "full_text_read",
+      "bytes": 1254,
+      "sha256": "4ab551b36d4c9013b5b88c9b042159e8b2a1e7ee90c531c7870d564d39692b8c",
+      "lines": 42
+    },
+    {
+      "path": "sdk/ui/src/main/kotlin/com/thelightphone/sdk/ui/LightIcon.kt",
+      "review": "full_text_read",
+      "bytes": 1361,
+      "sha256": "15d64e767ddacc9059aa6618d37fa6756d348ac2abbaa4d0d81e16800f59bb22",
+      "lines": 46
+    },
+    {
+      "path": "sdk/ui/src/main/kotlin/com/thelightphone/sdk/ui/LightIcons.kt",
+      "review": "full_text_read",
+      "bytes": 16074,
+      "sha256": "764cc198073f10e9e83df34397010f4ab3f04bf0c80085805922e9e8425a7391",
+      "lines": 449
+    },
+    {
+      "path": "sdk/ui/src/main/kotlin/com/thelightphone/sdk/ui/LightKeyHandler.kt",
+      "review": "full_text_read",
+      "bytes": 343,
+      "sha256": "09f50519818a66f78d681346064cbc557636bdc5b956a381296a74c7e39bac50",
+      "lines": 15
+    },
+    {
+      "path": "sdk/ui/src/main/kotlin/com/thelightphone/sdk/ui/LightModalManager.kt",
+      "review": "full_text_read",
+      "bytes": 3175,
+      "sha256": "a28c64ab74b0a8f979ae89f1f76a60a43f228f535266774dcc001f69a241dfb8",
+      "lines": 95
+    },
+    {
+      "path": "sdk/ui/src/main/kotlin/com/thelightphone/sdk/ui/LightNfcTapReader.kt",
+      "review": "full_text_read",
+      "bytes": 2980,
+      "sha256": "eaac4329d86143bc255f807c3b80f508676b3dc3a2141136eb4f34133378b1a7",
+      "lines": 96
+    },
+    {
+      "path": "sdk/ui/src/main/kotlin/com/thelightphone/sdk/ui/LightProgressBar.kt",
+      "review": "full_text_read",
+      "bytes": 3362,
+      "sha256": "7dae4221b40f7c9f0911e0a8ea697ed9abdf2b415097783e021f195a74995787",
+      "lines": 98
+    },
+    {
+      "path": "sdk/ui/src/main/kotlin/com/thelightphone/sdk/ui/LightQrCodeScanner.kt",
+      "review": "full_text_read",
+      "bytes": 10547,
+      "sha256": "4e5d261f9f1a37af4797bc5e5ed60be965b60f2c989ebc7cf04ed5234a8fd79c",
+      "lines": 288
+    },
+    {
+      "path": "sdk/ui/src/main/kotlin/com/thelightphone/sdk/ui/LightScrollView.kt",
+      "review": "full_text_read",
+      "bytes": 13849,
+      "sha256": "ddc24f890e08fb93119942a12e5f023372078ad1096bc622a5d772ff8a27ae8a",
+      "lines": 357
+    },
+    {
+      "path": "sdk/ui/src/main/kotlin/com/thelightphone/sdk/ui/LightText.kt",
+      "review": "full_text_read",
+      "bytes": 3596,
+      "sha256": "93163d8255ca4460255e34295e6764380cebeb6c5c474dbe94af8c3c66914d71",
+      "lines": 123
+    },
+    {
+      "path": "sdk/ui/src/main/kotlin/com/thelightphone/sdk/ui/LightTextField.kt",
+      "review": "full_text_read",
+      "bytes": 3848,
+      "sha256": "dadfd4097c4a531bf41f15d89ec5ada75255708b9b5e997b211448a2748fc9a2",
+      "lines": 110
+    },
+    {
+      "path": "sdk/ui/src/main/kotlin/com/thelightphone/sdk/ui/LightTextInputEditor.kt",
+      "review": "full_text_read",
+      "bytes": 10962,
+      "sha256": "510925b1cca31c4202eb73e4f02675e62a7f129f6679dd27290374334befc5ae",
+      "lines": 286
+    },
+    {
+      "path": "sdk/ui/src/main/kotlin/com/thelightphone/sdk/ui/LightTheme.kt",
+      "review": "full_text_read",
+      "bytes": 6969,
+      "sha256": "7317ecb0729872099107209af22fb205d52568b10c1185416a14a7745528285d",
+      "lines": 227
+    },
+    {
+      "path": "sdk/ui/src/main/kotlin/com/thelightphone/sdk/ui/LightThemeController.kt",
+      "review": "full_text_read",
+      "bytes": 913,
+      "sha256": "8d20e4fa97860dc714d8e225d72dac976101f45147bd3ae7e6c48c281c7bb10b",
+      "lines": 34
+    },
+    {
+      "path": "sdk/ui/src/main/kotlin/com/thelightphone/sdk/ui/LightTopBar.kt",
+      "review": "full_text_read",
+      "bytes": 5662,
+      "sha256": "b9bcbc289dc6f472aff16ce8006b15a605d657b11b00d8c6d637293d64d7117b",
+      "lines": 180
+    },
+    {
+      "path": "sdk/ui/src/main/kotlin/com/thelightphone/sdk/ui/keyboard/LightEmbeddedLp3Keyboard.kt",
+      "review": "full_text_read",
+      "bytes": 2313,
+      "sha256": "3e36d2813794d019b3b9a3082331b4c082a837ed1d37accc5f7c787e9b26dd63",
+      "lines": 61
+    },
+    {
+      "path": "sdk/ui/src/main/kotlin/com/thelightphone/sdk/ui/keyboard/TextInputKeyboardCallback.kt",
+      "review": "full_text_read",
+      "bytes": 3028,
+      "sha256": "b1bb9462bd9485d0c46a2101d7efc597561f59c45e9382e887d03b0e3637101f",
+      "lines": 96
+    },
+    {
+      "path": "sdk/ui/src/main/res/drawable/ic_accept_white.xml",
+      "review": "xml_structure_inspected",
+      "bytes": 456,
+      "sha256": "86ea2b3d0c2c2b29a5616a5c2d7be100964ea8cff5d86ea4b6abc5db0a5e4cf2"
+    },
+    {
+      "path": "sdk/ui/src/main/res/drawable/ic_add_white.xml",
+      "review": "xml_structure_inspected",
+      "bytes": 754,
+      "sha256": "528dc0dff3adaa08c42c403aed1a8fa4eb7087ff3775b26a7a9f36d00af58c9d"
+    },
+    {
+      "path": "sdk/ui/src/main/res/drawable/ic_airplane_white.xml",
+      "review": "xml_structure_inspected",
+      "bytes": 417,
+      "sha256": "37922787d0aed40d8b9601147416b55b5ced1401a75c051921dcdfdf3ad53520"
+    },
+    {
+      "path": "sdk/ui/src/main/res/drawable/ic_alarm_white.xml",
+      "review": "xml_structure_inspected",
+      "bytes": 768,
+      "sha256": "a1e224cfcca3441c512d610f761fd57c35c74cba2b43d86a9bbf6f3ab50cc6c3"
+    },
+    {
+      "path": "sdk/ui/src/main/res/drawable/ic_arrow_down_white.xml",
+      "review": "xml_structure_inspected",
+      "bytes": 818,
+      "sha256": "b7e8ee27abb6a21a4dae93f3746d0c4dcae365cf21ce3e51fc4a59057c2bac68"
+    },
+    {
+      "path": "sdk/ui/src/main/res/drawable/ic_arrow_right_white.xml",
+      "review": "xml_structure_inspected",
+      "bytes": 516,
+      "sha256": "f29d112c199368ebfdc10676e417ebd24b8fe41fc19b7314e0cc6cd0f047c485"
+    },
+    {
+      "path": "sdk/ui/src/main/res/drawable/ic_audio_message_white.xml",
+      "review": "xml_structure_inspected",
+      "bytes": 1327,
+      "sha256": "c4cf7346e7c7074e201a7cd23b0aa1df59d7c30790fa2bfc986fa95aa22bd2c8"
+    },
+    {
+      "path": "sdk/ui/src/main/res/drawable/ic_back_white.xml",
+      "review": "xml_structure_inspected",
+      "bytes": 403,
+      "sha256": "a12a4af344f013e54d7096162e2aa99ed2f4ecf61850389dfe045b642239254e"
+    },
+    {
+      "path": "sdk/ui/src/main/res/drawable/ic_battery_almost_full_white.xml",
+      "review": "xml_structure_inspected",
+      "bytes": 355,
+      "sha256": "2eb621554adc726e10aa742d4488e6fae8775213609439448d1c3cac208414d9"
+    },
+    {
+      "path": "sdk/ui/src/main/res/drawable/ic_battery_charging_white.xml",
+      "review": "xml_structure_inspected",
+      "bytes": 462,
+      "sha256": "c20e2fd05c3eb6366c890d34cb7fe2a8b3ac89a33b9103b3d139885aa38101fd"
+    },
+    {
+      "path": "sdk/ui/src/main/res/drawable/ic_battery_empty_white.xml",
+      "review": "xml_structure_inspected",
+      "bytes": 364,
+      "sha256": "f52a96e0818a8c0b6bae8247e99498788553005a09eae2fa568f166e2d7455ad"
+    },
+    {
+      "path": "sdk/ui/src/main/res/drawable/ic_battery_error_white.xml",
+      "review": "xml_structure_inspected",
+      "bytes": 495,
+      "sha256": "d09bab5b1f61316c272b048942262c0c0cde3c37d484cad955788cdc4db46ae6"
+    },
+    {
+      "path": "sdk/ui/src/main/res/drawable/ic_battery_full_white.xml",
+      "review": "xml_structure_inspected",
+      "bytes": 336,
+      "sha256": "e19343e0b97ef86ad3862d19df20857dcaf979d84b91ed1abd96107ac9b88c6f"
+    },
+    {
+      "path": "sdk/ui/src/main/res/drawable/ic_battery_half_white.xml",
+      "review": "xml_structure_inspected",
+      "bytes": 362,
+      "sha256": "836746bca7f344a89988a115edc6e92bd1afcb259e741e5e01413bd60a638d62"
+    },
+    {
+      "path": "sdk/ui/src/main/res/drawable/ic_battery_one_quarter_white.xml",
+      "review": "xml_structure_inspected",
+      "bytes": 363,
+      "sha256": "42ec516d0b930f2d401b7faad51f41c5a411639127bb6f65c5343971af38f0e7"
+    },
+    {
+      "path": "sdk/ui/src/main/res/drawable/ic_battery_three_quarters_white.xml",
+      "review": "xml_structure_inspected",
+      "bytes": 359,
+      "sha256": "6962cf9e5a493ad082c0ab7005ddd842afadb907b40bdb932f555fdb0d70e9db"
+    },
+    {
+      "path": "sdk/ui/src/main/res/drawable/ic_bluetooth_white.xml",
+      "review": "xml_structure_inspected",
+      "bytes": 594,
+      "sha256": "ddaaab583bf16722f146c644b4f84187797daed270d3846f9c8c76f590efd119"
+    },
+    {
+      "path": "sdk/ui/src/main/res/drawable/ic_call_white.xml",
+      "review": "xml_structure_inspected",
+      "bytes": 1005,
+      "sha256": "21b1d60c9e5175c577cc36458e102a89f2699f8f1a40b3bb2f7955858af085c4"
+    },
+    {
+      "path": "sdk/ui/src/main/res/drawable/ic_camera.xml",
+      "review": "xml_structure_inspected",
+      "bytes": 1842,
+      "sha256": "97f045258ea302df2e3ace5a84586df0d9a1cb7139e3ee8ec5e1856ea8ba040c"
+    },
+    {
+      "path": "sdk/ui/src/main/res/drawable/ic_camera_brightness.xml",
+      "review": "xml_structure_inspected",
+      "bytes": 1959,
+      "sha256": "8b92284c3c4f327fe45cfa3babb3a719b0c0b51654e4bf8dbc4594e9553a74da"
+    },
+    {
+      "path": "sdk/ui/src/main/res/drawable/ic_camera_flash_auto.xml",
+      "review": "xml_structure_inspected",
+      "bytes": 885,
+      "sha256": "001fc150b2fc61cc91c1432c8102ab9301b1ad0767f925b276d96ad4d000ee6c"
+    },
+    {
+      "path": "sdk/ui/src/main/res/drawable/ic_camera_flash_off.xml",
+      "review": "xml_structure_inspected",
+      "bytes": 670,
+      "sha256": "09637681ac17fd8d2b0eaab2181050fd55bb7d4804681bb6c89797d8323a884a"
+    },
+    {
+      "path": "sdk/ui/src/main/res/drawable/ic_camera_flash_on.xml",
+      "review": "xml_structure_inspected",
+      "bytes": 362,
+      "sha256": "50eac5e593d8f8f33480ea88a667497dfa568491598f81a3438a91adbf3b573e"
+    },
+    {
+      "path": "sdk/ui/src/main/res/drawable/ic_camera_focus_locked.xml",
+      "review": "xml_structure_inspected",
+      "bytes": 338,
+      "sha256": "d0b15ed357dfec6ae358f8753191b53656058ef4ff567dad151eaaf0c87b4983"
+    },
+    {
+      "path": "sdk/ui/src/main/res/drawable/ic_camera_focus_locking.xml",
+      "review": "xml_structure_inspected",
+      "bytes": 920,
+      "sha256": "5cc429e62eb3fccb900b5fb43f3018c33a48bf4daab17677ad815639ae17ed85"
+    },
+    {
+      "path": "sdk/ui/src/main/res/drawable/ic_camera_landscape.xml",
+      "review": "xml_structure_inspected",
+      "bytes": 1050,
+      "sha256": "9f93d31e02734cce363e5a909fd5e54c57798bf128380981fcc8f7e9d2e4d589"
+    },
+    {
+      "path": "sdk/ui/src/main/res/drawable/ic_camera_recording.xml",
+      "review": "xml_structure_inspected",
+      "bytes": 348,
+      "sha256": "d2ed2727ddd1518a5ad924a6cf0bb521b28493e79b77c2febbed2c00cf6a92d8"
+    },
+    {
+      "path": "sdk/ui/src/main/res/drawable/ic_camera_settings.xml",
+      "review": "xml_structure_inspected",
+      "bytes": 2473,
+      "sha256": "8b98209c4a2f1ecad083e031b6b0ee6c3177b74107052b9b956a5866016d3074"
+    },
+    {
+      "path": "sdk/ui/src/main/res/drawable/ic_ce_mark_white.xml",
+      "review": "xml_structure_inspected",
+      "bytes": 1488,
+      "sha256": "5c5827e1599dc674cc4daf5093b04b1c81404d4b9dcb692dd1ce2b3b404d8a30"
+    },
+    {
+      "path": "sdk/ui/src/main/res/drawable/ic_circle_white.xml",
+      "review": "xml_structure_inspected",
+      "bytes": 409,
+      "sha256": "03bafbf57574a180f01ca7b149576e47c2e01c5674ff1ee3253e65fc0dca1f08"
+    },
+    {
+      "path": "sdk/ui/src/main/res/drawable/ic_close_white.xml",
+      "review": "xml_structure_inspected",
+      "bytes": 424,
+      "sha256": "2c9f7465f45bc1b4eaf7e707c37ddfc6b7965c9ac3cc1b799ee70fe1f4cca6c9"
+    },
+    {
+      "path": "sdk/ui/src/main/res/drawable/ic_compose_white.xml",
+      "review": "xml_structure_inspected",
+      "bytes": 807,
+      "sha256": "430e7b72d0bb7261156d8cc355e1fed2d8613344ed01b33de34136907eb5305b"
+    },
+    {
+      "path": "sdk/ui/src/main/res/drawable/ic_contacts_white.xml",
+      "review": "xml_structure_inspected",
+      "bytes": 705,
+      "sha256": "249e204f9539aea2a956897800eb85d00e365dbd15c7d7faeb4a8c18f0b1acaf"
+    },
+    {
+      "path": "sdk/ui/src/main/res/drawable/ic_crosshair_white.xml",
+      "review": "xml_structure_inspected",
+      "bytes": 1107,
+      "sha256": "410a397a5fbdff23fd8bb12fe734bba077deaa1d414b60a2fc9d9b8452f97402"
+    },
+    {
+      "path": "sdk/ui/src/main/res/drawable/ic_delete_white.xml",
+      "review": "xml_structure_inspected",
+      "bytes": 739,
+      "sha256": "0be1b79c90c7a76bdb17ee1cb485365e0ad467f547ed32cd9d2af3cff9ad7975"
+    },
+    {
+      "path": "sdk/ui/src/main/res/drawable/ic_deny_white.xml",
+      "review": "xml_structure_inspected",
+      "bytes": 459,
+      "sha256": "474c35447138d2b2c27f46a9cdee4f8a654f7ea608475db551877391222a9451"
+    },
+    {
+      "path": "sdk/ui/src/main/res/drawable/ic_dialpad_white.xml",
+      "review": "xml_structure_inspected",
+      "bytes": 1481,
+      "sha256": "35bc4f8f0bd96fb11343f7d5355593e9858dfcc0c374895a8e38f1471110a646"
+    },
+    {
+      "path": "sdk/ui/src/main/res/drawable/ic_directions_arrival_white.xml",
+      "review": "xml_structure_inspected",
+      "bytes": 508,
+      "sha256": "b96ddb5dbd535538ec89441e9b9e3047e15ec7c54d03ae2b7837e58fb6e613de"
+    },
+    {
+      "path": "sdk/ui/src/main/res/drawable/ic_directions_bus_white.xml",
+      "review": "xml_structure_inspected",
+      "bytes": 1195,
+      "sha256": "f30061f6936a4eb817f29acf217985ce44f68cccd5b05d88063208a83b00a05e"
+    },
+    {
+      "path": "sdk/ui/src/main/res/drawable/ic_directions_ferry_white.xml",
+      "review": "xml_structure_inspected",
+      "bytes": 1127,
+      "sha256": "c1565b79ee752c41754bf5e8bf30e043e71558ff00eecf517f9085bd419ac4b6"
+    },
+    {
+      "path": "sdk/ui/src/main/res/drawable/ic_directions_left_white.xml",
+      "review": "xml_structure_inspected",
+      "bytes": 683,
+      "sha256": "4644b3e1ed2252bc8aeed269b0ea3a0518aebed818382b2b7a283d5d9355f0ad"
+    },
+    {
+      "path": "sdk/ui/src/main/res/drawable/ic_directions_middle_fork_white.xml",
+      "review": "xml_structure_inspected",
+      "bytes": 1572,
+      "sha256": "e7620496934c3b7d92da85f340442c8572f955be71a603a03c3191409fad42db"
+    },
+    {
+      "path": "sdk/ui/src/main/res/drawable/ic_directions_pedestrian_white.xml",
+      "review": "xml_structure_inspected",
+      "bytes": 2118,
+      "sha256": "994df084f9fbc646b558d1dcc2f776461ddc5ee4010cd9d5b45a6fa84fadbd3a"
+    },
+    {
+      "path": "sdk/ui/src/main/res/drawable/ic_directions_right_white.xml",
+      "review": "xml_structure_inspected",
+      "bytes": 684,
+      "sha256": "a833e1346ac43a58542ff8030a16ffa31be13d17803d86000455b7f42cd9a3cf"
+    },
+    {
+      "path": "sdk/ui/src/main/res/drawable/ic_directions_round_about_white.xml",
+      "review": "xml_structure_inspected",
+      "bytes": 1673,
+      "sha256": "c391bf0ba8cef6c6113a857f00a75f69eef7f6c14b7da64bc1f550e74902a7d1"
+    },
+    {
+      "path": "sdk/ui/src/main/res/drawable/ic_directions_slight_left_white.xml",
+      "review": "xml_structure_inspected",
+      "bytes": 668,
+      "sha256": "4f230d6ad32bcd4850ddd5115db2324514b2a067e4282164e12256388b2174bf"
+    },
+    {
+      "path": "sdk/ui/src/main/res/drawable/ic_directions_slight_right_white.xml",
+      "review": "xml_structure_inspected",
+      "bytes": 668,
+      "sha256": "66d4838ffd121355b29183556b995cc0b87ea9841f76ceb77a4c969f47371f94"
+    },
+    {
+      "path": "sdk/ui/src/main/res/drawable/ic_directions_straight_white.xml",
+      "review": "xml_structure_inspected",
+      "bytes": 666,
+      "sha256": "869a1498612c7570ace69dc1571ea8fcc4c5b18120d6d5fd55092a6f5749fff4"
+    },
+    {
+      "path": "sdk/ui/src/main/res/drawable/ic_directions_subway_white.xml",
+      "review": "xml_structure_inspected",
+      "bytes": 1704,
+      "sha256": "537a2a11fdeee3a0e057581dc5cfddce00adbcad5eb90e27f7d8ec18f633020e"
+    },
+    {
+      "path": "sdk/ui/src/main/res/drawable/ic_directions_train_white.xml",
+      "review": "xml_structure_inspected",
+      "bytes": 1618,
+      "sha256": "1011a87f7b0254f4a5ae2442114b68d1c33a33277c94c308505aad94f074fc51"
+    },
+    {
+      "path": "sdk/ui/src/main/res/drawable/ic_directions_uturn_left_white.xml",
+      "review": "xml_structure_inspected",
+      "bytes": 912,
+      "sha256": "4712fb3f4d32303abdbc950368a8ee0e689542a6f57c39e39b07263365992478"
+    },
+    {
+      "path": "sdk/ui/src/main/res/drawable/ic_directions_uturn_right_white.xml",
+      "review": "xml_structure_inspected",
+      "bytes": 912,
+      "sha256": "7152c3ce69df64d687d5b8348cba3099c8443c1692421c18f10406df9120b1e0"
+    },
+    {
+      "path": "sdk/ui/src/main/res/drawable/ic_down_white.xml",
+      "review": "xml_structure_inspected",
+      "bytes": 519,
+      "sha256": "f7b3c0ce54bb527925e78f3827148c45b5588a92abc1efe024f7272d3a6e4367"
+    },
+    {
+      "path": "sdk/ui/src/main/res/drawable/ic_download_arrow_white.xml",
+      "review": "xml_structure_inspected",
+      "bytes": 514,
+      "sha256": "6f626f4f6f14c6e19b277b9650160750bac4f6b86cdac8eaf940c9a64132c0ea"
+    },
+    {
+      "path": "sdk/ui/src/main/res/drawable/ic_downloaded_arrow_white.xml",
+      "review": "xml_structure_inspected",
+      "bytes": 592,
+      "sha256": "47f7a5bfc44550c712ba534f7b35b130f45e0c89225d7049acc454dfb90822de"
+    },
+    {
+      "path": "sdk/ui/src/main/res/drawable/ic_ellipse_white.xml",
+      "review": "xml_structure_inspected",
+      "bytes": 724,
+      "sha256": "5fd2998a0ae5129a2d11d42955139acb3164b22a07f225454dabedb37d71d02b"
+    },
+    {
+      "path": "sdk/ui/src/main/res/drawable/ic_emergency_white.xml",
+      "review": "xml_structure_inspected",
+      "bytes": 655,
+      "sha256": "3bbc7c9cc99010c1ff67f08ae8dab0a33b6da22c1be4b65154d1519f6a89b113"
+    },
+    {
+      "path": "sdk/ui/src/main/res/drawable/ic_fast_forward_white.xml",
+      "review": "xml_structure_inspected",
+      "bytes": 629,
+      "sha256": "8112df7ebe0ecf34238ceb9adb4e54babf02c2d9c3e345e77b047a9927a3ee04"
+    },
+    {
+      "path": "sdk/ui/src/main/res/drawable/ic_fcc_mark_white.xml",
+      "review": "xml_structure_inspected",
+      "bytes": 2052,
+      "sha256": "a2d4a435c1eb083384b62d3dbbf6c1e948c4fc4c7399913ef6bad168e2fecf11"
+    },
+    {
+      "path": "sdk/ui/src/main/res/drawable/ic_large_list_white.xml",
+      "review": "xml_structure_inspected",
+      "bytes": 2279,
+      "sha256": "a600c8bca6547b2fe16ad54b3293e49486490f8b869f95a5be455de20c3c4ea1"
+    },
+    {
+      "path": "sdk/ui/src/main/res/drawable/ic_light_logo_white.xml",
+      "review": "xml_structure_inspected",
+      "bytes": 2951,
+      "sha256": "fb4d2a781cb7add6712728251703fc5abe7f023cf27a940dd16416f69a5eda4f"
+    },
+    {
+      "path": "sdk/ui/src/main/res/drawable/ic_list_white.xml",
+      "review": "xml_structure_inspected",
+      "bytes": 1265,
+      "sha256": "33bb23af3dc159a8d81f83a573349d6af20f874dce612d55305b38e9dad60841"
+    },
+    {
+      "path": "sdk/ui/src/main/res/drawable/ic_loop_white.xml",
+      "review": "xml_structure_inspected",
+      "bytes": 1656,
+      "sha256": "7aa7c80f687e05d3c2ba60a0b85438ecc3cfe8b1211db30b1ac7a6188056530c"
+    },
+    {
+      "path": "sdk/ui/src/main/res/drawable/ic_map_white.xml",
+      "review": "xml_structure_inspected",
+      "bytes": 1067,
+      "sha256": "c5cba0587cd15cb9ada044519993e01101dbb5572ad63631441c68028db5b0d5"
+    },
+    {
+      "path": "sdk/ui/src/main/res/drawable/ic_media_white.xml",
+      "review": "xml_structure_inspected",
+      "bytes": 898,
+      "sha256": "a7105382c3eba06befcea5ed4cab945641c3af6eac4ee1893b7de6df2b92b419"
+    },
+    {
+      "path": "sdk/ui/src/main/res/drawable/ic_microphone_white.xml",
+      "review": "xml_structure_inspected",
+      "bytes": 727,
+      "sha256": "3c0d3c40176406183b0ebe5ccbd5bcc85522d94d4ca44b2c7dbf6738be56ec83"
+    },
+    {
+      "path": "sdk/ui/src/main/res/drawable/ic_missed_call_white.xml",
+      "review": "xml_structure_inspected",
+      "bytes": 1227,
+      "sha256": "6076e531eae477f112173eeb67fd70a8165ac1c58cf1295572a835093acca226"
+    },
+    {
+      "path": "sdk/ui/src/main/res/drawable/ic_mute_white.xml",
+      "review": "xml_structure_inspected",
+      "bytes": 1058,
+      "sha256": "9d3b93d1c0a15608152333052e65cf017dfef09d28d5e5f809730a820611a1c8"
+    },
+    {
+      "path": "sdk/ui/src/main/res/drawable/ic_pause_white.xml",
+      "review": "xml_structure_inspected",
+      "bytes": 882,
+      "sha256": "2ee787a03ea0a026f290ce6a9b57a00413f3e61d163bc45563f227387e749d55"
+    },
+    {
+      "path": "sdk/ui/src/main/res/drawable/ic_pencil_white.xml",
+      "review": "xml_structure_inspected",
+      "bytes": 575,
+      "sha256": "2bdcb5e686e704305b5fcc87d53b853adb820b4eda06aa967d910e56187b412b"
+    },
+    {
+      "path": "sdk/ui/src/main/res/drawable/ic_play_white.xml",
+      "review": "xml_structure_inspected",
+      "bytes": 371,
+      "sha256": "1ff255388299d7dd3e3c4c3dd65b78e1933e0fc0234a395864b9e20f9fde4ad4"
+    },
+    {
+      "path": "sdk/ui/src/main/res/drawable/ic_refresh_white.xml",
+      "review": "xml_structure_inspected",
+      "bytes": 863,
+      "sha256": "9324d2a7d46820deea180e57a05ee6b0b93c08eae9ea0bbc6711466b5a030f9f"
+    },
+    {
+      "path": "sdk/ui/src/main/res/drawable/ic_reverse_order_white.xml",
+      "review": "xml_structure_inspected",
+      "bytes": 653,
+      "sha256": "2ce26f9a526bf7b7d94288c4bba8114bcbac5944fa1843c9c3aa9ab0d99a8d36"
+    },
+    {
+      "path": "sdk/ui/src/main/res/drawable/ic_rewind_white.xml",
+      "review": "xml_structure_inspected",
+      "bytes": 658,
+      "sha256": "1d46d4178c995a082767afa6fdca9ca30cc14767e4c3754b8b325d4eb9b216b9"
+    },
+    {
+      "path": "sdk/ui/src/main/res/drawable/ic_rotate_white.xml",
+      "review": "xml_structure_inspected",
+      "bytes": 811,
+      "sha256": "a144d41032c3f88f6276f51cc3c970394f09f6eb148c007060c71d1537db9352"
+    },
+    {
+      "path": "sdk/ui/src/main/res/drawable/ic_save_to_album.xml",
+      "review": "xml_structure_inspected",
+      "bytes": 883,
+      "sha256": "bd3e922aa24be5274f9dab2d24079d465d9f0d8825d619a28b6511e2f8964066"
+    },
+    {
+      "path": "sdk/ui/src/main/res/drawable/ic_search_white.xml",
+      "review": "xml_structure_inspected",
+      "bytes": 672,
+      "sha256": "0a4d7800b44e08984ff6249b9ad377b7f8ebf573cd9bf457512b7b583f4ec3ca"
+    },
+    {
+      "path": "sdk/ui/src/main/res/drawable/ic_select_off_white.xml",
+      "review": "xml_structure_inspected",
+      "bytes": 456,
+      "sha256": "fec7e3f39a836f945348d892437120eaf2633621f8256a4410111682fac13402"
+    },
+    {
+      "path": "sdk/ui/src/main/res/drawable/ic_select_on_white.xml",
+      "review": "xml_structure_inspected",
+      "bytes": 515,
+      "sha256": "09a03b4593496c42bb7308ee218f2be42dd61839abd9251f404cb0625ed77f42"
+    },
+    {
+      "path": "sdk/ui/src/main/res/drawable/ic_send_white.xml",
+      "review": "xml_structure_inspected",
+      "bytes": 439,
+      "sha256": "e18a1d478c37d63267ad2b3aa60d13e8b3f56ab01d20e4ad4e9514a6cb76c1ca"
+    },
+    {
+      "path": "sdk/ui/src/main/res/drawable/ic_settings_white.xml",
+      "review": "xml_structure_inspected",
+      "bytes": 2270,
+      "sha256": "000bd5a2c0ede9bf3c65ce72be9aa90349907c0bab664bbe8e6091865f78c4da"
+    },
+    {
+      "path": "sdk/ui/src/main/res/drawable/ic_shuffle_white.xml",
+      "review": "xml_structure_inspected",
+      "bytes": 1970,
+      "sha256": "e176f31eb4316cc7c03d559fd321cba5dc79b840749df58391a316d671d24d59"
+    },
+    {
+      "path": "sdk/ui/src/main/res/drawable/ic_signal1_bar_white.xml",
+      "review": "xml_structure_inspected",
+      "bytes": 332,
+      "sha256": "a3cfeba687107ec9b342efd413dd2bf16d8807791770e30c3aecb55d830a2d4d"
+    },
+    {
+      "path": "sdk/ui/src/main/res/drawable/ic_signal2_bars_white.xml",
+      "review": "xml_structure_inspected",
+      "bytes": 464,
+      "sha256": "eecb7e8bdc46492e4f35ae45c83ddd476bb9ea9e770eefdc98efe93af9b40c15"
+    },
+    {
+      "path": "sdk/ui/src/main/res/drawable/ic_signal3_bars_white.xml",
+      "review": "xml_structure_inspected",
+      "bytes": 598,
+      "sha256": "12fcf291348d4c226e8d162f644c200c3e012542cbb93da7a99973f0935d851b"
+    },
+    {
+      "path": "sdk/ui/src/main/res/drawable/ic_signal4_bars_white.xml",
+      "review": "xml_structure_inspected",
+      "bytes": 732,
+      "sha256": "283c4b15e7d8fca22b8e280df0736eb960daa52e82ba8588799552a7aa216e3b"
+    },
+    {
+      "path": "sdk/ui/src/main/res/drawable/ic_signal_none_white.xml",
+      "review": "xml_structure_inspected",
+      "bytes": 587,
+      "sha256": "106bf7ad7e6a05587259b9ee1ea461f9c9ed4c1c8f5af38551f00e3fb05dfd3d"
+    },
+    {
+      "path": "sdk/ui/src/main/res/drawable/ic_skip_backward_fifteen_white.xml",
+      "review": "xml_structure_inspected",
+      "bytes": 1488,
+      "sha256": "741f4781ff4a248ac95cc7d1b4ad1bda7ce6bcf069179d73b5b004c7bc812368"
+    },
+    {
+      "path": "sdk/ui/src/main/res/drawable/ic_skip_forward_fifteen_white.xml",
+      "review": "xml_structure_inspected",
+      "bytes": 1562,
+      "sha256": "f53d3632ec0d647d5252c8c2e6c2369252f30a60263e1a0b3328c34d5a836f8d"
+    },
+    {
+      "path": "sdk/ui/src/main/res/drawable/ic_spacer.xml",
+      "review": "xml_structure_inspected",
+      "bytes": 183,
+      "sha256": "30714c5a8ad554aa61351474c7ae4c30382c0cf9e6fa5a48a929f7e19babb6cc"
+    },
+    {
+      "path": "sdk/ui/src/main/res/drawable/ic_speaker_muted.xml",
+      "review": "xml_structure_inspected",
+      "bytes": 944,
+      "sha256": "5c71b508377c090d1abbd2f219e29efb0ee4943cc3c2a1a180c9eee4fcc37ab5"
+    },
+    {
+      "path": "sdk/ui/src/main/res/drawable/ic_speaker_on.xml",
+      "review": "xml_structure_inspected",
+      "bytes": 1260,
+      "sha256": "570d14d7fd3d71bd6052a1a9b7a8700ab9eed7a6b3e51728aa98a7e86ddcba6b"
+    },
+    {
+      "path": "sdk/ui/src/main/res/drawable/ic_star_outline_white.xml",
+      "review": "xml_structure_inspected",
+      "bytes": 587,
+      "sha256": "c731e9242f8a1f07d640a07337378f3701ae95c12eea1d475a1d59f7d83898a6"
+    },
+    {
+      "path": "sdk/ui/src/main/res/drawable/ic_star_white.xml",
+      "review": "xml_structure_inspected",
+      "bytes": 363,
+      "sha256": "ae1531a0047db1777798bee8a36113e80e56898b9ad10345e269e45beaa31255"
+    },
+    {
+      "path": "sdk/ui/src/main/res/drawable/ic_stop_white.xml",
+      "review": "xml_structure_inspected",
+      "bytes": 402,
+      "sha256": "9a5ee450fdc127b1db905d04a8a2589c8e6c1b851061f629dd2b9d75f67ebe6b"
+    },
+    {
+      "path": "sdk/ui/src/main/res/drawable/ic_tethering_white.xml",
+      "review": "xml_structure_inspected",
+      "bytes": 844,
+      "sha256": "1cdedb81625b1c6b6b16b63726265b786bdab7c37db14f7e2020802b36a656c8"
+    },
+    {
+      "path": "sdk/ui/src/main/res/drawable/ic_toggle_state_off_white.xml",
+      "review": "xml_structure_inspected",
+      "bytes": 443,
+      "sha256": "e6456c2ca7f12971adfb37118c3c613dfadb2ccbe12679f4c99fbb1fa5c2c949"
+    },
+    {
+      "path": "sdk/ui/src/main/res/drawable/ic_toggle_state_on_white.xml",
+      "review": "xml_structure_inspected",
+      "bytes": 379,
+      "sha256": "43e1e1b7c088e8138fcad161916fd4ade464d701327ae809d90b060ec1b98668"
+    },
+    {
+      "path": "sdk/ui/src/main/res/drawable/ic_trash.xml",
+      "review": "xml_structure_inspected",
+      "bytes": 1927,
+      "sha256": "3f5c71807154994aa1aff604bcd77b5a726f33bd22d31a5c1e5b264e7a60dea1"
+    },
+    {
+      "path": "sdk/ui/src/main/res/drawable/ic_up_white.xml",
+      "review": "xml_structure_inspected",
+      "bytes": 518,
+      "sha256": "e90fc178400bc99f4772a4036ed4588040a8b9d74c626821656770b29a17c750"
+    },
+    {
+      "path": "sdk/ui/src/main/res/drawable/ic_voice_mail_white.xml",
+      "review": "xml_structure_inspected",
+      "bytes": 562,
+      "sha256": "7c79f06958b64377225d015559db254eecb1b6faf39262469f0a26bedc8d7264"
+    },
+    {
+      "path": "sdk/ui/src/main/res/drawable/ic_voice_memo_white.xml",
+      "review": "xml_structure_inspected",
+      "bytes": 4065,
+      "sha256": "3d5ed963d0df46ebc19cf37d02742b4cd2a00cbbeed73168dc9a5512eff83874"
+    },
+    {
+      "path": "sdk/ui/src/main/res/drawable/ic_weee_mark_white.xml",
+      "review": "xml_structure_inspected",
+      "bytes": 2528,
+      "sha256": "50016821ac45dfcd7e588389edfc8bc85c109ba39e730356ae1c822d8e721718"
+    },
+    {
+      "path": "sdk/ui/src/main/res/drawable/ic_wifi_no_internet_white.xml",
+      "review": "xml_structure_inspected",
+      "bytes": 1688,
+      "sha256": "17dae17c835aadb1e68353f66cca9db2709430aa02e0321b5b3871515ef4c167"
+    },
+    {
+      "path": "sdk/ui/src/main/res/drawable/ic_wifi_white.xml",
+      "review": "xml_structure_inspected",
+      "bytes": 820,
+      "sha256": "9b103c83e48d2fa4c3b9992b4bc86314dcf360a60cf174b6bff3d64b9655af02"
+    },
+    {
+      "path": "sdk/ui/src/test/kotlin/com/thelightphone/sdk/LightVibratorTest.kt",
+      "review": "full_text_read",
+      "bytes": 1761,
+      "sha256": "3fd903ed5ca74362ec71c690f9452f2e8bf69bd2d5814b158391386c7acceea2",
+      "lines": 59
+    },
+    {
+      "path": "sdk/ui/src/test/kotlin/com/thelightphone/sdk/ui/LightScrollViewLayoutTest.kt",
+      "review": "full_text_read",
+      "bytes": 1792,
+      "sha256": "7b6bcd4017244a8d1a709a9dc3a0d59a663a559641fd2a8bd995ad4df01ca222",
+      "lines": 55
+    },
+    {
+      "path": "settings.gradle.kts",
+      "review": "full_text_read",
+      "bytes": 1299,
+      "sha256": "10ff82c859ff0755048f281fc50b877a060e6959e31d57c1e6a3390bc8c1b402",
+      "lines": 45
+    },
+    {
+      "path": "signer/README.md",
+      "review": "full_text_read",
+      "bytes": 3134,
+      "sha256": "5394c721362576051829f4d4b57246174fac9fee3f85994104e7d031c4218a8b",
+      "lines": 72
+    },
+    {
+      "path": "signer/lightsigner/__init__.py",
+      "review": "full_text_read",
+      "bytes": 36,
+      "sha256": "975b418dd21ef32c6b42542bb85e5675f654606c602e554bd20bb80d968f8754",
+      "lines": 1
+    },
+    {
+      "path": "signer/lightsigner/__main__.py",
+      "review": "full_text_read",
+      "bytes": 8175,
+      "sha256": "8a3cba845b009287988aebe9b90bfc63c6c5d9cc4bc774c339e17a2cc0db79eb",
+      "lines": 217
+    },
+    {
+      "path": "signer/lightsigner/apk.py",
+      "review": "full_text_read",
+      "bytes": 2996,
+      "sha256": "69adacc18d055501e3aac5966b680d2fb7dfd70ac311062445fce0134b6d7aab",
+      "lines": 80
+    },
+    {
+      "path": "signer/lightsigner/build_recipe.py",
+      "review": "full_text_read",
+      "bytes": 2177,
+      "sha256": "c56cb5dd7e48282f687abdb1b933f27889f026f9ccd1e82ed314d52522b836a5",
+      "lines": 62
+    },
+    {
+      "path": "signer/lightsigner/bundle.py",
+      "review": "full_text_read",
+      "bytes": 12758,
+      "sha256": "8bf7adda008c6c62a572cfb548c78c24e5bc2f487d1a1c0923b588e5bef006d0",
+      "lines": 279
+    },
+    {
+      "path": "signer/lightsigner/bundle_format.py",
+      "review": "full_text_read",
+      "bytes": 302,
+      "sha256": "8c1f81b06aaff4dcb704396b5dc864789b41331122737299cf5a99bcec5c5fcd",
+      "lines": 9
+    },
+    {
+      "path": "signer/lightsigner/errors.py",
+      "review": "full_text_read",
+      "bytes": 183,
+      "sha256": "ce1b45299e748538d44460aa1032187bad851ef6ca0c1e101cff257b02dc921e",
+      "lines": 7
+    },
+    {
+      "path": "signer/lightsigner/keys.py",
+      "review": "full_text_read",
+      "bytes": 4534,
+      "sha256": "bf8f4b43f8983b5b1454e3ed601a56bd470d7e01f6c4300f6fcc34cb47dd0709",
+      "lines": 130
+    },
+    {
+      "path": "signer/lightsigner/registry.py",
+      "review": "full_text_read",
+      "bytes": 2916,
+      "sha256": "a1777881cfb6883ccf40b9ab028fc5263ba20d2f52f9a95755f736764f86b98e",
+      "lines": 76
+    },
+    {
+      "path": "signer/lightsigner/signing.py",
+      "review": "full_text_read",
+      "bytes": 2274,
+      "sha256": "2c2fddbf425ac481b94d2038ec068a01c95e34b10892b27a09164d739cf639b8",
+      "lines": 53
+    },
+    {
+      "path": "signer/lightsigner/tools.py",
+      "review": "full_text_read",
+      "bytes": 2055,
+      "sha256": "431107bd2cc201c22da4e2c3207f255dd08b28f4c8cb314dfdd1907cfe36b85a",
+      "lines": 62
+    },
+    {
+      "path": "signer/lightsigner/trust_statement.py",
+      "review": "full_text_read",
+      "bytes": 3488,
+      "sha256": "74459459dc20d58811e662d8900ec0a8f275375e57f07888e11f7079bc28532f",
+      "lines": 83
+    },
+    {
+      "path": "signer/lightsigner/verify.py",
+      "review": "full_text_read",
+      "bytes": 1339,
+      "sha256": "9f60413fe3842cc7f75e97d5bf089bb47f06a77a83a9b2b0677f9fc0293d0c4d",
+      "lines": 29
+    },
+    {
+      "path": "signer/registry.json",
+      "review": "full_text_read",
+      "bytes": 3,
+      "sha256": "ca3d163bab055381827226140568f3bef7eaac187cebd76878e0b63e9e442356",
+      "lines": 1
+    },
+    {
+      "path": "signer/tests/__init__.py",
+      "review": "full_text_read",
+      "bytes": 39,
+      "sha256": "bf9057bb899a68dc4acf42669e333c25b3da8d570cbf12c470608326147b2879",
+      "lines": 1
+    },
+    {
+      "path": "signer/tests/conftest.py",
+      "review": "full_text_read",
+      "bytes": 204,
+      "sha256": "5ffc5295769874a1143da23a322c24f90105e6786d6f9543d863138c2948aaaf",
+      "lines": 8
+    },
+    {
+      "path": "signer/tests/test_android_integration.py",
+      "review": "full_text_read",
+      "bytes": 4559,
+      "sha256": "da2eaf08c4aa9f223b734c60bb5e2c9e9df179199085681b163e964da45d57cb",
+      "lines": 97
+    },
+    {
+      "path": "signer/tests/test_apksigner_output.py",
+      "review": "full_text_read",
+      "bytes": 1776,
+      "sha256": "cbf9e9f5c6208efa5aaa9afa5d342bd8c23e3fcf504508f3eccc0f3650fc2738",
+      "lines": 36
+    },
+    {
+      "path": "signer/tests/test_bundle.py",
+      "review": "full_text_read",
+      "bytes": 16185,
+      "sha256": "4beec13683f5c5b7bd2ce414a75369f4753d78c4419f7af68989e4a2d5b59b42",
+      "lines": 384
+    },
+    {
+      "path": "signer/tests/test_registry.py",
+      "review": "full_text_read",
+      "bytes": 1018,
+      "sha256": "0c33de08424dca953bc272a5893d4af97d5613bcb8ab52dbc431e43e7574ebae",
+      "lines": 26
+    },
+    {
+      "path": "signer/tests/test_signing_metadata.py",
+      "review": "full_text_read",
+      "bytes": 1902,
+      "sha256": "ea9720edd2aa14efe8dbb88ac3c71358935829fb34dd926462f8cde06c0a5ac2",
+      "lines": 53
+    },
+    {
+      "path": "signer/tests/test_trust_statement.py",
+      "review": "full_text_read",
+      "bytes": 3123,
+      "sha256": "2b2fb63d08ce8e5e8b1c0ad6601c6bdcec38dfe327918fbc2ebd30ad272f1558",
+      "lines": 71
+    },
+    {
+      "path": "signer/tests/test_verify.py",
+      "review": "full_text_read",
+      "bytes": 2467,
+      "sha256": "d56a0c5375fc1a2ee27f17a4a6fe176ad36b8f9e78bab961036012e2a2d39cd5",
+      "lines": 54
+    },
+    {
+      "path": "signer/tests/vectors/bundle/INSECURE-bundle-private.pem",
+      "review": "binary_or_cryptographic_asset_inventoried",
+      "bytes": 119,
+      "sha256": "59c1ff39ccb82faf1e3095e9f7ec63fad1b27f87d90b6f01c7cd421b244401cb"
+    },
+    {
+      "path": "signer/tests/vectors/bundle/INSECURE-bundle-public.pem",
+      "review": "binary_or_cryptographic_asset_inventoried",
+      "bytes": 113,
+      "sha256": "72d7ed3895820127d2a15616623a08219203889b8f8d8db81469f617512962f4"
+    },
+    {
+      "path": "signer/tests/vectors/bundle/INSECURE-foreign-private.pem",
+      "review": "binary_or_cryptographic_asset_inventoried",
+      "bytes": 119,
+      "sha256": "e08f1e19fa43423c098448d62fa8348f480a677ec217c37ce0df2f73e9f0e8c9"
+    },
+    {
+      "path": "signer/tests/vectors/bundle/INSECURE-foreign-public.pem",
+      "review": "binary_or_cryptographic_asset_inventoried",
+      "bytes": 113,
+      "sha256": "68c6be48d0ba79a45cc220a3d6b7198cd23b4c127c11e394943c53ba31e9998c"
+    },
+    {
+      "path": "signer/tests/vectors/bundle/edited-payload/bundle.json",
+      "review": "full_text_read",
+      "bytes": 954,
+      "sha256": "8d339dbf500e8dd7dc495a565b448f23f38fac4418327f71770d338dc1e38abb",
+      "lines": 37
+    },
+    {
+      "path": "signer/tests/vectors/bundle/edited-payload/bundle.sig",
+      "review": "binary_or_cryptographic_asset_inventoried",
+      "bytes": 64,
+      "sha256": "a2a90b0b6f2994cdaa7e06c892f9c2bbe47192c6c2689581015fe31e84661cc3"
+    },
+    {
+      "path": "signer/tests/vectors/bundle/expected-trust-set.json",
+      "review": "full_text_read",
+      "bytes": 403,
+      "sha256": "2e5a736274ea2ccf88cc75e03539294898fa95c5a6388408f604b583205f1581",
+      "lines": 11
+    },
+    {
+      "path": "signer/tests/vectors/bundle/foreign-key/bundle.json",
+      "review": "full_text_read",
+      "bytes": 954,
+      "sha256": "82d41babd458d68d9a66b576500f70f35038f938a070b74d83e35e0220ec394b",
+      "lines": 37
+    },
+    {
+      "path": "signer/tests/vectors/bundle/foreign-key/bundle.sig",
+      "review": "binary_or_cryptographic_asset_inventoried",
+      "bytes": 64,
+      "sha256": "2fde6f43503291a6526c290c7a6cc25111bb29154eaddb1013a87fbd04e3fb9c"
+    },
+    {
+      "path": "signer/tests/vectors/bundle/generate.py",
+      "review": "full_text_read",
+      "bytes": 3037,
+      "sha256": "2af7ecbb794c4081d09226e42b5c2077e5d1c434a58f52d316c6772e6a1703e3",
+      "lines": 90
+    },
+    {
+      "path": "signer/tests/vectors/bundle/newer-schema/bundle.json",
+      "review": "full_text_read",
+      "bytes": 954,
+      "sha256": "bd8cbd6f4152db35bd9bc0330c115ed54bbe154882364d7a366571d8246ddb82",
+      "lines": 37
+    },
+    {
+      "path": "signer/tests/vectors/bundle/newer-schema/bundle.sig",
+      "review": "binary_or_cryptographic_asset_inventoried",
+      "bytes": 64,
+      "sha256": "e6627fabb31ad2413e5d43db78498b0c06a77b3e586abb11d41f73c9a53c28b5"
+    },
+    {
+      "path": "signer/tests/vectors/bundle/no-domain-separator/bundle.json",
+      "review": "full_text_read",
+      "bytes": 954,
+      "sha256": "82d41babd458d68d9a66b576500f70f35038f938a070b74d83e35e0220ec394b",
+      "lines": 37
+    },
+    {
+      "path": "signer/tests/vectors/bundle/no-domain-separator/bundle.sig",
+      "review": "binary_or_cryptographic_asset_inventoried",
+      "bytes": 64,
+      "sha256": "aa07bd9e7cb0e016a815fc7fe43e12071eda3f150c1e445299052959b9351508"
+    },
+    {
+      "path": "signer/tests/vectors/bundle/utf16-be/bundle.json",
+      "review": "full_text_read",
+      "bytes": 1910,
+      "sha256": "faee9b78c9412f1b0b75e29127359c27084a9d2c4fd27130d48f2dd01523a507",
+      "lines": 37
+    },
+    {
+      "path": "signer/tests/vectors/bundle/utf16-be/bundle.sig",
+      "review": "binary_or_cryptographic_asset_inventoried",
+      "bytes": 64,
+      "sha256": "5c5b63a14eb8cefd2d3a5ca5cfe1b5124f2b1875678fa9f696b36b2c7e4beb6a"
+    },
+    {
+      "path": "signer/tests/vectors/bundle/utf16-le/bundle.json",
+      "review": "full_text_read",
+      "bytes": 1910,
+      "sha256": "ccbaf53738886e367d27fd3c2da03166e2869888737aab64ed0db34e2b072f4e",
+      "lines": 37
+    },
+    {
+      "path": "signer/tests/vectors/bundle/utf16-le/bundle.sig",
+      "review": "binary_or_cryptographic_asset_inventoried",
+      "bytes": 64,
+      "sha256": "a0c59bad63198016efe89e7cb0244785aa68062e8689e8a067a64fb0c16acecc"
+    },
+    {
+      "path": "signer/tests/vectors/bundle/utf32-be/bundle.json",
+      "review": "full_text_read",
+      "bytes": 3820,
+      "sha256": "b7e6762130494a4ce5d6d6ef6a983b6c1eb4e7e45253aa8e426b540ad9fd9e47",
+      "lines": 37
+    },
+    {
+      "path": "signer/tests/vectors/bundle/utf32-be/bundle.sig",
+      "review": "binary_or_cryptographic_asset_inventoried",
+      "bytes": 64,
+      "sha256": "09a1253acb8f1dda3bd6f84cde6a20f09e37b2f594f76a3d24447f0e698a0525"
+    },
+    {
+      "path": "signer/tests/vectors/bundle/utf32-le/bundle.json",
+      "review": "full_text_read",
+      "bytes": 3820,
+      "sha256": "48a6bf23c99f5fba53b8a3b8d5ae31ff57d93564fa6d340f95413dd43112a879",
+      "lines": 37
+    },
+    {
+      "path": "signer/tests/vectors/bundle/utf32-le/bundle.sig",
+      "review": "binary_or_cryptographic_asset_inventoried",
+      "bytes": 64,
+      "sha256": "9efe97538cc90372bbb406b26a1739ec58e8810c9a5d0a748a061980ba95dca5"
+    },
+    {
+      "path": "signer/tests/vectors/bundle/utf8-bom/bundle.json",
+      "review": "full_text_read",
+      "bytes": 957,
+      "sha256": "8a04ebbbbfd8cae2baea7f4facac405f74e4f1060bd99e78cb8dbde78185993f",
+      "lines": 37
+    },
+    {
+      "path": "signer/tests/vectors/bundle/utf8-bom/bundle.sig",
+      "review": "binary_or_cryptographic_asset_inventoried",
+      "bytes": 64,
+      "sha256": "0f2020aedd246db157aa911a000ada6927b5fb4b3cea839b3333438a85a2aa96"
+    },
+    {
+      "path": "signer/tests/vectors/bundle/valid/bundle.json",
+      "review": "full_text_read",
+      "bytes": 954,
+      "sha256": "82d41babd458d68d9a66b576500f70f35038f938a070b74d83e35e0220ec394b",
+      "lines": 37
+    },
+    {
+      "path": "signer/tests/vectors/bundle/valid/bundle.sig",
+      "review": "binary_or_cryptographic_asset_inventoried",
+      "bytes": 64,
+      "sha256": "a2a90b0b6f2994cdaa7e06c892f9c2bbe47192c6c2689581015fe31e84661cc3"
+    },
+    {
+      "path": "signer/tests/vectors/bundle/whitespace-edit/bundle.json",
+      "review": "full_text_read",
+      "bytes": 955,
+      "sha256": "3cdad6a07abf15c74b1700744cc8da40b2af0d78705b1c5ce709ddc7408843ff",
+      "lines": 38
+    },
+    {
+      "path": "signer/tests/vectors/bundle/whitespace-edit/bundle.sig",
+      "review": "binary_or_cryptographic_asset_inventoried",
+      "bytes": 64,
+      "sha256": "a2a90b0b6f2994cdaa7e06c892f9c2bbe47192c6c2689581015fe31e84661cc3"
+    },
+    {
+      "path": "tool/build.gradle.kts",
+      "review": "full_text_read",
+      "bytes": 11041,
+      "sha256": "9feaaf7b08d130acec9336c470732ad286feffd9aa1142bf570c706c71ef297e",
+      "lines": 268
+    },
+    {
+      "path": "tool/lighttool.toml",
+      "review": "full_text_read",
+      "bytes": 344,
+      "sha256": "d82f1c7bb9ab1f460cb725e88f33e38975a68cca20cf267924604995ca831aae",
+      "lines": 10
+    },
+    {
+      "path": "tool/src/main/kotlin/com/thelightphone/sample/DetailScreen.kt",
+      "review": "full_text_read",
+      "bytes": 3965,
+      "sha256": "0a4f23048a1a3ba7d6f2a5b555680c3f0e2e33ce3dc325c7117e404c14a8fde3",
+      "lines": 118
+    },
+    {
+      "path": "tool/src/main/kotlin/com/thelightphone/sample/HomeScreen.kt",
+      "review": "full_text_read",
+      "bytes": 5461,
+      "sha256": "99de247545f80f17416e9367f9bac392613abc45b2d6c6c0fbcf2e9859845924",
+      "lines": 139
+    },
+    {
+      "path": "tool/src/main/kotlin/com/thelightphone/sample/ToolEntryPoint.kt",
+      "review": "full_text_read",
+      "bytes": 819,
+      "sha256": "46b18ab84b81128e2294fc162ddecaceb52a4a66ce067ef21a184ff3c4559d84",
+      "lines": 26
+    },
+    {
+      "path": "trust-format/README.md",
+      "review": "full_text_read",
+      "bytes": 3351,
+      "sha256": "196725e59f755b474f36371fe529905607cc8c2ed12376bcca71b7464b01ad3b",
+      "lines": 58
+    },
+    {
+      "path": "trust-format/bundle-domain-separator.txt",
+      "review": "full_text_read",
+      "bytes": 24,
+      "sha256": "f1fe7b0e62c6ba1fdbfa7d303855432e7808ba8083cf009157d94f3a45170390",
+      "lines": 1
+    },
+    {
+      "path": "trust-format/bundle-schema-v1.json",
+      "review": "full_text_read",
+      "bytes": 3592,
+      "sha256": "f2012a7712f614201fbd7886c74e63e07722893b3467d3debfed1d1fa5bb6c2c",
+      "lines": 115
+    }
+  ],
+  "schemaVersion": 1,
+  "repository": "https://github.com/lightphone/light-sdk",
+  "completedAtUtc": "2026-10-17T04:38:16+00:00",
+  "totalFiles": 461,
+  "totalBytes": 4039082,
+  "fullTextLines": 32013,
+  "missingTrackedFiles": []
+}

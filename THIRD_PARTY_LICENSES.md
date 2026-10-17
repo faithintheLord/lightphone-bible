@@ -1,49 +1,27 @@
-# Third-Party Licenses
+# Third-party content and licenses
 
-## Bible translations
+## Scripture
 
-### Berean Standard Bible (BSB)
+**Berean Standard Bible (BSB)** — public domain. [Berean Bible](https://berean.bible/) dedicated the translation to the public domain on April 30, 2023. The Holy Bible, Berean Standard Bible, is produced in cooperation with Bible Hub, Discovery Bible, OpenBible.com, and the Berean Bible Translation Committee.
 
-Public domain. Dedicated to the public domain April 30, 2023.
+**World English Bible (WEB)** — public domain. “World English Bible” is a trademark of eBible.org; the name should not be used for altered translation text. [Publisher's notice](https://ebible.org/engwebp/copyright.htm). This app displays the supplied verse text; word-study annotations do not replace it with interlinear wording.
 
-> The Holy Bible, Berean Standard Bible, BSB is produced in cooperation with Bible Hub, Discovery Bible, OpenBible.com, and the Berean Bible Translation Committee. This text of God's Word has been dedicated to the public domain.
-
-- https://berean.bible/
-
-### World English Bible (WEB)
-
-Public domain.
-
-> The name "World English Bible" is reserved for faithful copies of this translation.
-
-- https://ebible.org/find/web/
-
-Data served via [Free Use Bible API](https://bible.helloao.org) (MIT license for API software).
+Both translations are downloaded through [Free Use Bible API](https://bible.helloao.org/docs/). The API's software license does not replace each translation's content terms.
 
 ## Strong's dictionaries
 
-### Open Scriptures Strong's (Greek & Hebrew)
+Bundled data comes from [Open Scriptures Strong's](https://github.com/openscriptures/strongs/tree/0acd2f251c2d35ff8db2dece4e0593979d3ac223).
 
-- Source: https://github.com/openscriptures/strongs
-- License: **CC-BY-SA** (Creative Commons Attribution-ShareAlike)
-- Derived from Strong's Exhaustive Concordance (1890), JSON conversion by Open Scriptures
+- Greek JSON: copyright 2009 Open Scriptures, CC-BY-SA, derived from XML prepared by Ulrik Petersen from Strong's 1890 Greek dictionary.
+- Hebrew JSON: copyright 2010 Open Scriptures, CC-BY-SA, derived from XML; source work by David Instone-Brewer, with editing, corrections, and Unicode transliterations by David Troidl, based on Strong's 1894 Hebrew dictionary.
+- The upstream headers specify CC-BY-SA without a version; this project preserves that statement rather than assigning an unsupported version.
 
-Attribution: *Strong's Dictionaries of Hebrew and Greek, Open Scriptures, CC-BY-SA.*
+The JavaScript wrappers were removed and JSON formatting compacted. Dictionary entries are unchanged. The dictionary data retains its upstream CC-BY-SA terms, separate from the app's MIT code license. Full upstream notices are bundled in [NOTICE.txt](tool/src/main/assets/strongs/NOTICE.txt); source commit, checksums, and transformation are recorded in [provenance.json](tool/src/main/assets/strongs/provenance.json). Reproduce them with `scripts/prepare-strongs.sh`.
 
-## BSB interlinear / morphology
+## BSB word mappings
 
-### BSB-publishing bsb-data-output
+The app downloads only the `base/display/` data from [BSB Publishing](https://github.com/BSB-publishing/bsb-data-output), labeled **CC0 / public domain** by its [attribution document](https://github.com/BSB-publishing/bsb-data-output/blob/main/ATTRIBUTION.md). It does not download the separately licensed `index-cc-by` morphology dataset.
 
-- Source: https://github.com/BSB-publishing/bsb-data-output
-- Word-level Strong's mappings: public domain (BSB text)
+## Software
 
-### Open Scriptures Hebrew Bible (morphology fields)
-
-- Source: https://hb.openscriptures.org/
-- License: **CC-BY 4.0** when morphology codes are displayed
-
-Attribution: *Morphology data from Open Scriptures Hebrew Bible, CC-BY 4.0.*
-
-## Light SDK
-
-- https://github.com/lightphone/light-sdk (MIT)
+The [Light SDK](https://github.com/lightphone/light-sdk) is MIT licensed; its license is preserved in the pinned submodule. AndroidX, Kotlin, Ktor, and SDK transitive dependencies retain their respective upstream licenses and packaged notices. App source is covered by [LICENSE](LICENSE); that license does not supersede third-party content terms.

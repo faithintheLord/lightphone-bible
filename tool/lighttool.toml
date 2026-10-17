@@ -1,0 +1,10 @@
+[tool]
+id = "com.lightphone.bible"
+label = "Bible"
+versionCode = 1
+versionName = "1.0.0"
+permissions = [
+  "android.permission.INTERNET",
+  "android.permission.ACCESS_NETWORK_STATE",
+]
+serverPackage = "com.lightos"

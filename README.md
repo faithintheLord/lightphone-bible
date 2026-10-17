@@ -1,85 +1,60 @@
 # Light Phone Bible
 
-An offline-first Bible reader for [Light Phone III](https://github.com/lightphone/light-sdk), built with the Light SDK. Read the **Berean Standard Bible (BSB)** and **World English Bible (WEB)**, with bookmarks, highlights, notes, search, reading plans, and BSB original-language word study via Strong's numbers.
+An offline Bible reader for Light Phone III, built with the official [Light SDK](https://github.com/lightphone/light-sdk). Read the Berean Standard Bible (BSB) and World English Bible (WEB), compare translations, save verses and notes, follow reading plans, and explore BSB Strong's word mappings.
 
-Target status: **Light-approved Community Tool** when Light's submission pipeline opens.
+This is an independent community project. Light's approval and distribution are separate from local builds; see [submission status](SUBMISSION.md).
 
 ## Features
 
-- Book / chapter / verse reading with resume position and font size
-- BSB + WEB translations (extensible catalog)
-- Side-by-side translation compare
-- Bookmarks, highlights (4 colors), and notes (all local)
-- Full-text search (offline FTS)
-- Reading plans (Bible in a Year, NT in 90 Days, Psalms in 30 Days)
-- Verse of the Day
-- **Word study (BSB):** tap a word for Strong's Hebrew/Greek definitions (openscriptures + BSB interlinear)
+- Book/chapter browsing, selected-verse navigation, reading position, and adjustable text size
+- BSB and WEB, with optional comparison while reading
+- Local bookmarks, highlights, and editable notes
+- Offline text search of the selected translation
+- Bible in a Year, New Testament in 90 Days, and Psalms in 30 Days
+- Verse of the Day and BSB Hebrew/Greek word study
+- Resumable downloads that retain already downloaded chapters
 
-## Requirements
+No accounts, advertising, analytics, or push notifications. Scripture and word mappings require an initial HTTPS download. Strong's dictionaries and reading plans are bundled. Completed content works offline. Read the [privacy policy](PRIVACY.md) for network and storage details.
 
-- Android Studio / JDK 17
-- Git submodules: `vendor/light-sdk` and `vendor/light-keyboard` (keyboard UI is built from source; GitHub Packages credentials are optional)
+## Build
 
-## Setup
+Requirements: JDK 17, Android SDK platform 36 and build tools 36.0.0, Python 3.11+, and Git. The tool supports Android 14 / Light Phone III. Internet access to Google Maven, Maven Central, the Gradle Plugin Portal, and JitPack is required for the first build. No GitHub Packages credentials are needed.
 
 ```bash
-git clone --recurse-submodules https://github.com/<your-org>/lightphone-bible.git
+git clone --recurse-submodules https://github.com/faithintheLord/lightphone-bible.git
 cd lightphone-bible
-
-# If submodule missing:
-git submodule update --init --recursive
-./scripts/patch-light-sdk-vendor.sh
-./scripts/patch-keyboard-vendor.sh
-
-# Copy local.properties.example → local.properties and set sdk.dir
 cp local.properties.example local.properties
-
-# Optional: regenerate Strong's JSON from openscriptures
-./scripts/prepare-strongs.sh
+# Set sdk.dir in local.properties to your Android SDK installation.
+source scripts/android-env.sh
+./gradlew :tool:check :tool:assembleDebug
 ```
 
-## Build & run
+The SDK submodule is pinned to official release **v0.2.0**, commit `0577efca9bde782fbfd37309adcf78aa4d5b29df`. SDK sources are unmodified. Asset access uses `SealedLightContext.readAsset`; no framework-context or keyboard patches are required.
+
+## Test and install
 
 ```bash
-source scripts/android-env.sh
-./gradlew :bible:check
-./gradlew :bible:installDebug
+./gradlew :tool:installDebug
 adb shell am start -n com.lightphone.bible/com.thelightphone.sdk.LightActivity
+./scripts/smoke-test-emulator.sh
 ```
 
-## Emulator testing (LightOS)
+Local debug APKs use the SDK's public development key. Local release builds are unsigned and intended for validation. Light builds and signs the published public commit.
 
-This repo is configured for the LightOS emulator workflow (`serverPackage = "com.thelightphone.sdk.emulator"` in `bible/lighttool.toml`).
+The committed `tool/lighttool.toml` targets `com.lightos`, as required on a real phone. Basic reading can be tested on a standard Android emulator. For LightOS integration testing, use [Light's emulator setup](vendor/light-sdk/docs/system_app/README.md); `scripts/setup-lightos-emulator.sh` builds the emulator via `-PincludeLightEmulator=true`. Use `scripts/launch-bible.sh --lightos-emulator` for a temporary emulator-targeted build; the script restores production metadata afterward.
 
-1. **SDK + AVD:** `source scripts/android-env.sh`, then `./scripts/create-avd.sh` (creates `LightPhoneIII`, API 34, 1080×1240).
-2. **LightOS emulator (one-time):** `./scripts/setup-lightos-emulator.sh` — builds `:sdk:emulator`, installs as priv-app (`uid=1000`).
-3. **Install Bible:** `./gradlew :bible:installDebug` with the emulator running.
-4. **Smoke test:** `./scripts/smoke-test-emulator.sh`
+## Submission build
 
-Switch `serverPackage` back to `com.lightos` before sideloading to real LP3 hardware.
-
-See [vendor/light-sdk/docs/system_app/README.md](vendor/light-sdk/docs/system_app/README.md) for details.
-
-## First launch
-
-On first open the app downloads BSB and WEB text (~15–20 MB) and BSB interlinear data. Wi-Fi is recommended. Strong's dictionaries (~1.5 MB) are bundled in the APK.
-
-## Project structure
-
-```
-lightphone-bible/
-├── bible/              # Application module (your tool)
-├── vendor/light-sdk/   # Git submodule — official Light SDK
-├── scripts/            # vendor patches, AVD, emulator setup, smoke tests
-└── docs/               # Submission templates
+```bash
+./scripts/verify-submission.sh
 ```
 
-## Submission
+This extracts only `tool/` files using Light's official builder code, overlays them on a clean copy of the pinned SDK, and builds an unsigned, optimized ARM64 release. It checks that the tool does not depend on this repository's custom root build wiring. Results are written to `build/submission-check/`. Light's server build and review are still required.
 
-See [SUBMISSION.md](SUBMISSION.md), [PRIVACY.md](PRIVACY.md), and [THIRD_PARTY_LICENSES.md](THIRD_PARTY_LICENSES.md).
+See [SUBMISSION.md](SUBMISSION.md), [listing copy](docs/STORE_LISTING.md), [test checklist](docs/TEST_CHECKLIST.md), and [SDK review](docs/SDK_REVIEW.md).
 
-To reserve tool id `com.lightphone.bible`, file an issue using [docs/COMMUNITY_TOOL_ISSUE.md](docs/COMMUNITY_TOOL_ISSUE.md).
+## Data and licenses
 
-## License
+App code is [MIT licensed](LICENSE). Scripture and dictionaries have separate terms documented in [THIRD_PARTY_LICENSES.md](THIRD_PARTY_LICENSES.md). The dictionary generation script pins and verifies its upstream source; run `scripts/prepare-strongs.sh` to reproduce the bundled JSON and notices.
 
-MIT — see [LICENSE](LICENSE). Bible text and Strong's data are separately licensed; see [THIRD_PARTY_LICENSES.md](THIRD_PARTY_LICENSES.md).
+Report bugs through [GitHub issues](https://github.com/faithintheLord/lightphone-bible/issues). Do not include private notes or personal information in public reports.

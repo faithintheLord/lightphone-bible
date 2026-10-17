@@ -11,5 +11,12 @@
 *.jks
 !vendor/light-sdk/sdk/keys/lightsdk-dev.jks
 vendor/light-sdk/sdk/emulator/keys/platform.jks
-bible/build/
+tool/build/
 vendor/light-keyboard/local.properties
+
+.kotlin/
+**/__pycache__/
+
+/.local-backups/
+/vendor/light-keyboard/
+/bible/build/
