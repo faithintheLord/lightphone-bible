@@ -1,0 +1,36 @@
+{
+  "sdkCommit": "0577efca9bde782fbfd37309adcf78aa4d5b29df",
+  "sourceCommit": "73bfc77b3e4cda8043e4f9ee5f1e09189d95c137",
+  "sourceHasUncommittedChanges": false,
+  "extractedSourceSha256": "41c01e24795bc7fcebdd6aa2ad8cf174cd12dcb850906171c41944c67b2a3ab4",
+  "file": "lightphone-bible-unsigned.apk",
+  "sha256": "5c6ed7ac1be2727575ad8a6e12ade96ec7930ef5f1fcb5dcdc8bd0976788929f",
+  "sizeBytes": 12401387,
+  "status": "Local unsigned validation artifact; Light builds and signs the submitted public commit.",
+  "verificationDate": "2026-10-17",
+  "tests": {
+    "debug": 38,
+    "release": 38,
+    "failures": 0,
+    "errors": 0
+  },
+  "lint": {
+    "errors": 0,
+    "warnings": [
+      "MissingApplicationIcon: SDK-generated manifest"
+    ]
+  },
+  "linuxCi": "https://github.com/faithintheLord/lightphone-bible/actions/runs/39004412986",
+  "linuxCiResult": "success",
+  "linuxCiCommit": "bd7ed46223550acd0cd4d81511a01f9e33615653",
+  "linuxCiNote": "Same tool tree as the locally built commit; later changes affect verification scripts and documentation only.",
+  "toolGitTree": "5cd54b779905339fc83718f04a1ba488fd47b20a",
+  "optimizedReleaseSmoke": "Passed: cold launch, 45-second process survival, no package crash",
+  "screenshots": {
+    "home.png": "4041f635a718304572d961911f8b7e0942617e32c4dc075556fe7e036f21c8d6",
+    "reader.png": "23b25ee2fb66a58cce63f5ddc1a8b0bcc20ad4ad65bb32b869397a846bedf554",
+    "reading-plan.png": "e309535ef883fa64b9447a52b195c1e7a9da164a954b46dabb2cf5d01bc59110",
+    "word-study.png": "2dc697d7b2e715d3f45f2e04bf5ba88a8fa1061a2edbfe5718e9b9d2286264d7"
+  },
+  "physicalLightPhoneTested": false
+}

@@ -37,7 +37,7 @@ fail_with_logs() {
 
 echo "Launching Bible on $("${ADB[@]}" get-serialno)..."
 "${ADB[@]}" shell am force-stop "$PACKAGE"
-START_TIME="$("${ADB[@]}" shell date '+%m-%d %H:%M:%S.000' | tr -d '\r')"
+START_TIME="$("${ADB[@]}" shell "date '+%m-%d %H:%M:%S.000'" | tr -d '\r')"
 if ! LAUNCH_OUTPUT="$("${ADB[@]}" shell am start -W -n "$PACKAGE/$ACTIVITY" 2>&1)"; then
   echo "$LAUNCH_OUTPUT" >&2
   fail_with_logs "Activity launch command failed."
@@ -54,7 +54,7 @@ sleep 15
 echo "Allowing 30 seconds for any background work already enqueued by the app..."
 sleep 30
 "${ADB[@]}" shell pidof "$PACKAGE" >/dev/null || fail_with_logs "Bible process exited during the smoke test."
-CRASH_OUTPUT="$("${ADB[@]}" logcat -b crash -d -T "$START_TIME")"
+CRASH_OUTPUT="$("${ADB[@]}" shell "logcat -b crash -d -T '$START_TIME'")"
 if [[ "$CRASH_OUTPUT" == *"$PACKAGE"* ]]; then
   echo "$CRASH_OUTPUT" >&2
   fail_with_logs "A Bible crash was recorded during the smoke test."

@@ -2,6 +2,15 @@
 
 Record actual results in SUBMISSION.md. An unchecked item is not a passed test.
 
+## Candidate results — October 17, 2026
+
+- All 38 unit tests passed in each debug/release variant. Lint has zero errors and one SDK-generated launcher-icon warning. Local extraction/optimized release and Linux CI passed; see [build evidence](review-evidence/release-build.json).
+- Complete downloads and SQLite integrity were checked on the isolated Android 14 ARM64 emulator: both translations, every expected chapter, all BSB mappings, and both dictionaries. [Counts and migration evidence](review-evidence/device-data-check.json).
+- Offline checks passed for cold launch, reading, comparison, selected-verse search navigation, Strong's definitions, and concordance navigation. Legacy text migration retained a bookmark and note.
+- The optimized release passed the 45-second launch/process/crash smoke test. Saved data survived the debug-to-release upgrade; note editing and deletion, highlight removal, and Saved refresh passed.
+- Plan completion, refreshed totals, resuming the first incomplete day, chapter links, and a single back action after multiple day changes passed in the optimized release.
+- Physical Light Phone III, LightOS service integration, light-theme device appearance, physical keys, and a Light-signed server artifact remain untested. Use the complete acceptance checklist below on the phone before requesting final approval. The emulator checks do not mark every scenario below as passed.
+
 ## Automated
 
 - Unit tests: Scripture parsing, bounded references, resumable download behavior, job input decoding, reader text/word annotation integrity, morphology decoder.
