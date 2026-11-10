@@ -25,7 +25,11 @@ Record actual results in SUBMISSION.md. An unchecked item is not a passed test.
 1. Clean install: initial download status is visible; disconnect/reconnect the network and retry. Text becomes readable before all word-study downloads finish.
 2. Navigate Genesis and John; previous/next works across chapter/book boundaries; reopening restores reading position.
 3. Select a verse, bookmark it, change/remove its highlight, add/edit/delete a note, and reopen it from Saved.
-4. Search both translations, including punctuation and an empty query. Confirm results open the correct translation and verse.
+4. Check the home bottom bar: Settings on the left, Books in the center, Search on the right. Confirm SEARCH and SETTINGS are absent from the scrollable action list and both icons still work.
+   - Open Search from Home and Reader: the keyboard and "Search Bible" title appear immediately. Use the on-screen Back button and system/physical Back separately; each returns to the originating screen before any search is submitted.
+   - Submit empty or whitespace-only text: stay in the editor. Search both translations, including punctuation. Confirm results open the correct translation and verse, and Back from the verse restores the results without reopening the keyboard.
+   - Tap the query to edit it, change or clear the text, then cancel using the editor's on-screen Back button. The previous query and results remain. Submitting blank text keeps the editor open and leaves the previous results available on cancel. System/physical Back follows the SDK behavior and leaves Search.
+   - Repeat editing/submitting to verify the keyboard continues to accept input. Check a query with no matches and searching before a translation is downloaded; the message remains visible and the query can still be edited.
 5. Set each reading size. Enable comparison and change primary translation; confirm text/labels update on returning to Reader.
 6. Open a BSB mapped word, read its Strong's definition, and follow a concordance result back to the correct verse.
 7. Open each reading plan, advance a day, mark progress, leave, and resume. Confirm there is no growing stack of previous plan days.
