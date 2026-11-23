@@ -154,10 +154,8 @@ class BibleHomeScreen(sealedActivity: SealedLightActivity) :
                         }
 
                         HomeNavItem("BOOKS") { navigateTo(::BookPickerScreen) }
-                        HomeNavItem("SEARCH") { navigateTo(::SearchScreen) }
                         HomeNavItem("SAVED") { navigateTo(::SavedScreen) }
                         HomeNavItem("PLANS") { navigateTo(::PlansScreen) }
-                        HomeNavItem("SETTINGS") { navigateTo(::SettingsScreen) }
                         HomeNavItem("TRANSLATIONS") { navigateTo(::TranslationsScreen) }
                     }
                 }
@@ -165,18 +163,18 @@ class BibleHomeScreen(sealedActivity: SealedLightActivity) :
                 LightBottomBar(
                     items = listOf(
                         LightBarButton.LightIcon(
-                            icon = LightIcons.SEARCH,
-                            contentDescription = "Search",
-                            onClick = { navigateTo(::SearchScreen) },
+                            icon = LightIcons.SETTINGS,
+                            contentDescription = "Settings",
+                            onClick = { navigateTo(::SettingsScreen) },
                         ),
                         LightBarButton.Text(
                             text = "BOOKS",
                             onClick = { navigateTo(::BookPickerScreen) },
                         ),
                         LightBarButton.LightIcon(
-                            icon = LightIcons.SETTINGS,
-                            contentDescription = "Settings",
-                            onClick = { navigateTo(::SettingsScreen) },
+                            icon = LightIcons.SEARCH,
+                            contentDescription = "Search",
+                            onClick = { navigateTo(::SearchScreen) },
                         ),
                     ),
                 )

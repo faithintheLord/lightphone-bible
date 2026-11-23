@@ -28,7 +28,7 @@ data class SearchUiState(
     val isSearching: Boolean = false,
     val results: List<SearchResultItem> = emptyList(),
     val editorSession: Int = 0,
-    val showEditor: Boolean = false,
+    val showEditor: Boolean = true,
     val errorMessage: String? = null,
 )
 
@@ -42,8 +42,10 @@ class SearchViewModel(
     val uiState: StateFlow<SearchUiState> = _uiState.asStateFlow()
 
     override fun onBackPressed(): Boolean {
-        if (!_uiState.value.showEditor) return false
-        cancelEditor()
+        val state = _uiState.value
+        // A new search has no results screen to return to.
+        if (!state.showEditor || state.query.isBlank()) return false
+        _uiState.update { it.copy(showEditor = false) }
         return true
     }
 
@@ -51,17 +53,13 @@ class SearchViewModel(
         _uiState.update { it.copy(showEditor = true, editorSession = it.editorSession + 1) }
     }
 
-    fun cancelEditor() {
-        _uiState.update { it.copy(showEditor = false) }
-    }
-
     fun submitQuery(raw: CharSequence) {
         val query = raw.toString().trim()
+        if (query.isEmpty()) return
         searchJob?.cancel()
         _uiState.update {
-            it.copy(query = query, showEditor = false, isSearching = query.isNotEmpty(), results = emptyList(), errorMessage = null)
+            it.copy(query = query, showEditor = false, isSearching = true, results = emptyList(), errorMessage = null)
         }
-        if (query.isEmpty()) return
         searchJob = viewModelScope.launch(Dispatchers.IO) {
             try {
                 val translationId = app.preferences.getPrimaryTranslationId() ?: "BSB"

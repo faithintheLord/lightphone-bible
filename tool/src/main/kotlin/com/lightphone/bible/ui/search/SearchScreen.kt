@@ -58,7 +58,7 @@ class SearchScreen(sealedActivity: SealedLightActivity) :
                         keyboardOptionsFlow = keyboardOptionsFlow,
                         state = textState,
                         onSubmit = viewModel::submitQuery,
-                        onBack = viewModel::cancelEditor,
+                        onBack = { goBack() },
                         submitIcon = LightIcons.SEARCH,
                         showBackButton = true,
                         modifier = Modifier
@@ -82,7 +82,7 @@ class SearchScreen(sealedActivity: SealedLightActivity) :
                     )
 
                     LightText(
-                        text = if (state.query.isBlank()) "TAP TO SEARCH" else state.query,
+                        text = state.query,
                         variant = LightTextVariant.Heading,
                         modifier = Modifier
                             .padding(horizontal = 1f.gridUnitsAsDp())
