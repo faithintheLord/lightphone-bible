@@ -20,6 +20,8 @@ No accounts, advertising, analytics, or social features. Initial Scripture and w
 
 **Support URL:** https://github.com/faithintheLord/lightphone-bible/issues
 
-**Initial release notes:** First public release for Light Phone III: BSB and WEB reading, translation comparison, adjustable text, bookmarks, highlights, notes, offline search, reading plans, and BSB Strong's word study. Built against Light SDK 0.2.0.
+**1.0.2 release notes:** Updated to Light SDK 0.2.10, including its external Light keyboard support and embedded keyboard fallback. Settings is now at the bottom left and Search at the bottom right of Home. Search opens directly to text entry, and the duplicate Search and Settings list actions have been removed.
+
+**Historical 1.0.0 release notes:** First release candidate for Light Phone III: BSB and WEB reading, translation comparison, adjustable text, bookmarks, highlights, notes, offline search, reading plans, and BSB Strong's word study. Built against Light SDK 0.2.0.
 
 **Screenshots:** Use actual app screenshots from `docs/screenshots/`. At least one screenshot is required by Light. Only advertise screenshots from a verified build.
