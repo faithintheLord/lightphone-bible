@@ -29,7 +29,7 @@ source scripts/android-env.sh
 ./gradlew :tool:check :tool:assembleDebug
 ```
 
-The SDK submodule is pinned to official release **v0.2.0**, commit `0577efca9bde782fbfd37309adcf78aa4d5b29df`. SDK sources are unmodified. Asset access uses `SealedLightContext.readAsset`; no framework-context or keyboard patches are required.
+The SDK submodule is pinned to official release **v0.2.10**, commit `7f95f38b2b5c59f67ea11e921ab6195243907c6d`. SDK sources are unmodified. Root `gradle.properties` declares `sdkVersion=0.2.10`; Light uses that value to select its server builder image. The local dependency catalog matches the pinned SDK.
 
 ## Test and install
 
@@ -50,6 +50,8 @@ The committed `tool/lighttool.toml` targets `com.lightos`, as required on a real
 ```
 
 This extracts only `tool/` files using Light's official builder code, overlays them on a clean copy of the pinned SDK, and builds an unsigned, optimized ARM64 release. It checks that the tool does not depend on this repository's custom root build wiring. Results are written to `build/submission-check/`. Light's server build and review are still required.
+
+The 1.0.2 candidate retains the existing package `com.lightphone.bible`. SDK 0.2.10 documents `com.lightphone.*` as reserved for Light, so acceptance of this existing listing requires an exception or confirmation from Light. Passing local builds does not establish that exception; see [submission status](SUBMISSION.md).
 
 See [SUBMISSION.md](SUBMISSION.md), [listing copy](docs/STORE_LISTING.md), [test checklist](docs/TEST_CHECKLIST.md), and [SDK review](docs/SDK_REVIEW.md).
 
