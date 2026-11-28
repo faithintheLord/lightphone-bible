@@ -14,7 +14,7 @@ export async function GET(
   req: Request,
   ctx: { params: Promise<{ tripId: string }> },
 ) {
-  const record = requireSession(bearerToken(req));
+  const record = await requireSession(bearerToken(req));
   if (!record) return error(401, "Unauthorized.", "unauthorized");
 
   const { tripId } = await ctx.params;

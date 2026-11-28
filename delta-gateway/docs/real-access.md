@@ -36,6 +36,7 @@ Phone **Settings → API base** = deployment origin only (no `/v1` suffix), e.g.
 2. Request scopes that cover **member journey / order** data and **boarding pass barcode** issuance (confirm with Delta partner support — member check-in is not self-serve).
 3. In this Vercel project, set env vars (never commit):
    - `SESSION_HMAC_SECRET` (required for production token signing)
+   - `BLOB_READ_WRITE_TOKEN` (private Blob store — already used for session/trip persistence)
    - `DELTA_PARTNER_CLIENT_ID`
    - `DELTA_PARTNER_CLIENT_SECRET`
    - `DELTA_PARTNER_TOKEN_URL` (from portal docs)

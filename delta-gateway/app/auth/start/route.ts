@@ -17,7 +17,7 @@ export async function POST(req: Request) {
 
   const displayName = (body.displayName ?? "").trim() || "SkyMiles Member";
   const skymilesNumber = (body.skymilesNumber ?? "").trim();
-  const session = createPairedMemberSession(displayName, skymilesNumber);
+  const session = await createPairedMemberSession(displayName, skymilesNumber);
   return json({
     token: session.token,
     skymilesMasked: session.skymilesMasked,

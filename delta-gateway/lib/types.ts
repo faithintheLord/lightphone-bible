@@ -95,12 +95,13 @@ export type TripState = {
   seatCode?: string;
   bagCount?: number;
   quotes: Record<string, PaymentQuote>;
-  paid: Set<string> | string[];
+  paid: string[];
   checkedIn: boolean;
   boardingPass?: BoardingPass;
 };
 
 export type SessionRecord = {
+  sid: string;
   session: Session;
   mode: "demo" | "paired";
   createdAt: number;

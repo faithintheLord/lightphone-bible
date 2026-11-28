@@ -2,7 +2,7 @@ import { requireSession } from "@/lib/auth";
 import { DEMO_TRIP_ID } from "@/lib/constants";
 import { buildQuote } from "@/lib/demo";
 import { bearerToken, error, json, options } from "@/lib/http";
-import { ensureTripState, saveQuote } from "@/lib/store";
+import { ensureTripState, putSession, saveQuote } from "@/lib/store";
 import type { CheckInDraft } from "@/lib/types";
 
 export const runtime = "nodejs";
@@ -15,7 +15,7 @@ export async function POST(
   req: Request,
   ctx: { params: Promise<{ tripId: string }> },
 ) {
-  const record = requireSession(bearerToken(req));
+  const record = await requireSession(bearerToken(req));
   if (!record) return error(401, "Unauthorized.", "unauthorized");
   const { tripId } = await ctx.params;
   if (tripId !== DEMO_TRIP_ID) return error(404, "Trip not found.", "not_found");
@@ -34,5 +34,6 @@ export async function POST(
 
   const quote = buildQuote(tripId, draft, state);
   saveQuote(state, quote);
+  await putSession(record);
   return json(quote);
 }

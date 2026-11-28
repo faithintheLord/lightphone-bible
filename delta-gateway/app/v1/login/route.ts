@@ -21,7 +21,7 @@ export async function POST(req: Request) {
     return error(400, "skymilesNumber and password are required.", "invalid_request");
   }
 
-  const session = loginWithPassword(skymilesNumber, password);
+  const session = await loginWithPassword(skymilesNumber, password);
   if (!session) {
     return error(401, "Invalid credentials.", "invalid_credentials");
   }

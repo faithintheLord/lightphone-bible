@@ -11,7 +11,7 @@ export function OPTIONS() {
 }
 
 export async function GET(req: Request) {
-  const record = requireSession(bearerToken(req));
+  const record = await requireSession(bearerToken(req));
   if (!record) return error(401, "Unauthorized.", "unauthorized");
 
   const state = ensureTripState(record, DEMO_TRIP_ID);

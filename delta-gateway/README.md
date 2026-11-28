@@ -25,6 +25,7 @@ node scripts/smoke.mjs http://127.0.0.1:3000
 | Variable | Purpose |
 | --- | --- |
 | `SESSION_HMAC_SECRET` | HMAC secret for bearer tokens (≥16 chars) |
+| `BLOB_READ_WRITE_TOKEN` | Private Vercel Blob store for session/trip/quote/check-in state across instances |
 | `DELTA_PARTNER_CLIENT_ID` | Optional — after Delta partner approval |
 | `DELTA_PARTNER_CLIENT_SECRET` | Optional — after Delta partner approval |
 | `DELTA_PARTNER_TOKEN_URL` | Optional partner token endpoint |

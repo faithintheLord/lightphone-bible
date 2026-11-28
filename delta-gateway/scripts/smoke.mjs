@@ -5,7 +5,7 @@
  */
 const base = (process.argv[2] || "http://127.0.0.1:3000").replace(/\/$/, "");
 
-async function req(method, path, { token, body } = {}) {
+async function req(method, path, { token, body, expectStatus } = {}) {
   const headers = { "Content-Type": "application/json" };
   if (token) headers.Authorization = `Bearer ${token}`;
   const res = await fetch(`${base}${path}`, {
@@ -21,6 +21,12 @@ async function req(method, path, { token, body } = {}) {
   } catch {
     json = text;
   }
+  if (expectStatus != null) {
+    if (res.status !== expectStatus) {
+      throw new Error(`${method} ${path} -> ${res.status} (wanted ${expectStatus}) ${text}`);
+    }
+    return { status: res.status, json };
+  }
   if (!res.ok && res.status !== 204) {
     throw new Error(`${method} ${path} -> ${res.status} ${text}`);
   }
@@ -30,7 +36,7 @@ async function req(method, path, { token, body } = {}) {
 async function main() {
   console.log(`Smoke testing ${base}`);
   const health = await req("GET", "/api/health");
-  console.log("health", health.json.ok);
+  console.log("health", health.json.ok, "storage", health.json.storage);
 
   const login = await req("POST", "/v1/login", {
     body: { skymilesNumber: "1234567890", password: "demo" },
@@ -67,6 +73,14 @@ async function main() {
   });
   console.log("quote", quote.json.id, quote.json.totalCents);
 
+  // Chargeable check-in without payment must fail.
+  await req("POST", `/v1/trips/${trip.id}/check-in`, {
+    token,
+    body: { ...draft, paymentQuoteId: quote.json.id },
+    expectStatus: 402,
+  });
+  console.log("unpaid check-in correctly rejected");
+
   await req("POST", `/v1/trips/${trip.id}/pay`, {
     token,
     body: { quoteId: quote.json.id },
@@ -81,6 +95,12 @@ async function main() {
   const fetched = await req("GET", `/v1/trips/${trip.id}/boarding-pass`, { token });
   if (fetched.json.barcodePayload !== pass.json.barcodePayload) {
     throw new Error("boarding pass mismatch");
+  }
+
+  // Fresh-looking follow-up (new HTTP client) should still see boarding pass via Blob.
+  const fetchedAgain = await req("GET", `/v1/trips/${trip.id}/boarding-pass`, { token });
+  if (!fetchedAgain.json.barcodePayload) {
+    throw new Error("boarding pass missing on follow-up fetch");
   }
 
   console.log("SMOKE OK");
